@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 
@@ -48,6 +48,10 @@ export function Footer() {
             <a href={`tel:${siteConfig.phones.spanish}`} className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
               <Phone className="h-4 w-4 text-secondary" />
               Espanol: {siteConfig.phones.spanish}
+            </a>
+            <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
+              <Mail className="h-4 w-4 text-secondary" />
+              {siteConfig.email}
             </a>
             <p className="inline-flex items-center gap-2 text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />

@@ -56,7 +56,12 @@ export function CtaSection() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="text-sm text-muted-foreground">English & Espanol Available</p>
+          <div className="space-y-1 text-sm text-muted-foreground">
+            <p>English & Espanol Available</p>
+            <a href={`mailto:${siteConfig.email}`} className="font-medium text-secondary hover:text-secondary/80">
+              {siteConfig.email}
+            </a>
+          </div>
         </Reveal>
       </Container>
     </Section>

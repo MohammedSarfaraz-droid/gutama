@@ -6,25 +6,25 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 const SERVICE_AREA_LABEL = "Proudly Serving Essex County, NJ";
 
 const MUNICIPALITIES = [
-  "Newark",
-  "East Orange",
-  "Orange",
-  "Irvington",
-  "Belleville",
-  "Bloomfield",
-  "Caldwell",
-  "Cedar Grove",
-  "Essex Fells",
-  "Glen Ridge",
-  "Livingston",
-  "Maplewood",
-  "Millburn",
-  "North Caldwell",
-  "Nutley",
-  "Roseland",
-  "South Orange",
-  "Verona",
-  "West Orange",
+  { name: "Newark", zip: "07102" },
+  { name: "East Orange", zip: "07017" },
+  { name: "Orange", zip: "07050" },
+  { name: "Irvington", zip: "07111" },
+  { name: "Belleville", zip: "07109" },
+  { name: "Bloomfield", zip: "07003" },
+  { name: "Caldwell", zip: "07006" },
+  { name: "Cedar Grove", zip: "07009" },
+  { name: "Essex Fells", zip: "07021" },
+  { name: "Glen Ridge", zip: "07028" },
+  { name: "Livingston", zip: "07039" },
+  { name: "Maplewood", zip: "07040" },
+  { name: "Millburn", zip: "07041" },
+  { name: "North Caldwell", zip: "07006" },
+  { name: "Nutley", zip: "07110" },
+  { name: "Roseland", zip: "07068" },
+  { name: "South Orange", zip: "07079" },
+  { name: "Verona", zip: "07044" },
+  { name: "West Orange", zip: "07052" },
 ];
 
 export function ServiceAreasSection() {
@@ -40,9 +40,10 @@ export function ServiceAreasSection() {
 
         <StaggerGroup className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5" delay={0.08}>
           {MUNICIPALITIES.map((town) => (
-            <StaggerItem key={town}>
+            <StaggerItem key={town.name}>
               <div className="glass-card border px-4 py-3 text-center text-sm font-medium text-foreground transition-colors hover:border-secondary/40">
-                {town}
+                <p>{town.name}</p>
+                <p className="text-xs font-semibold tracking-wide text-secondary">{town.zip}</p>
               </div>
             </StaggerItem>
           ))}

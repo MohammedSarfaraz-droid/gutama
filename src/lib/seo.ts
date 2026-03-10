@@ -49,6 +49,7 @@ export function getLocalBusinessSchema() {
     description: DESCRIPTION,
     areaServed: REGION,
     telephone: siteConfig.phones.english,
+    email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.address.locality,
