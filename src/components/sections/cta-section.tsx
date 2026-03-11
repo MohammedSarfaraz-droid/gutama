@@ -9,7 +9,7 @@ import { Reveal } from "@/components/motion/reveal";
 export function CtaSection() {
   return (
     <Section id="contact" className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" aria-hidden="true" />
+      <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-background to-background" aria-hidden="true" />
       <Container className="relative text-center">
         <Reveal>
           <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">

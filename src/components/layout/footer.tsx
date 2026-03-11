@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Music2, Phone } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 
@@ -10,12 +10,12 @@ const DESCRIPTION =
   "Premium roofing and exterior solutions for residential and commercial properties in Essex County, New Jersey.";
 
 const QUICK_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Service Areas", href: "#service-areas" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/#about" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Service Areas", href: "/#service-areas" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const TOP_SERVICES = [
@@ -30,6 +30,12 @@ const TOP_SERVICES = [
   { slug: "dormers", shortTitle: "Dormers" },
   { slug: "gutters", shortTitle: "Gutters" },
 ];
+
+const SOCIAL_LINKS = [
+  { label: "Instagram", href: "https://instagram.com", icon: Instagram },
+  { label: "Facebook", href: "https://facebook.com", icon: Facebook },
+  { label: "TikTok", href: "https://www.tiktok.com/@gutamaroofing.com", icon: Music2 },
+] as const;
 
 export function Footer() {
   return (
@@ -62,7 +68,7 @@ export function Footer() {
 
         <div>
           <h3 className="font-serif text-lg text-foreground">Quick Links</h3>
-          <div className="gold-divider !mx-0 my-4" />
+          <div className="gold-divider mx-0! my-4" />
           <div className="flex flex-col gap-2">
             {QUICK_LINKS.map((item) => (
               <Link key={item.label} href={item.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
@@ -74,24 +80,45 @@ export function Footer() {
 
         <div>
           <h3 className="font-serif text-lg text-foreground">Top Services</h3>
-          <div className="gold-divider !mx-0 my-4" />
+          <div className="gold-divider mx-0! my-4" />
           <div className="flex flex-col gap-2">
             {TOP_SERVICES.map((service) => (
-              <p key={service.slug} className="text-sm text-muted-foreground">
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
                 {service.shortTitle}
-              </p>
+              </Link>
             ))}
           </div>
         </div>
 
         <div>
           <h3 className="font-serif text-lg text-foreground">Need An Estimate?</h3>
-          <div className="gold-divider !mx-0 my-4" />
+          <div className="gold-divider mx-0! my-4" />
           <div className="space-y-3 text-sm text-muted-foreground">
             <p>Call us for free consultation and project planning.</p>
-            <Link href="#contact" className="text-primary hover:text-primary/80">
-              Go to Contact Section
+            <Link href="/contact" className="text-primary hover:text-primary/80">
+              Go to Contact Page
             </Link>
+            <div className="pt-2">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Follow Us</p>
+              <div className="flex items-center gap-3">
+                {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Follow us on ${label}`}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-border/60 text-muted-foreground transition-all hover:border-primary/50 hover:bg-primary/5 hover:text-primary"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

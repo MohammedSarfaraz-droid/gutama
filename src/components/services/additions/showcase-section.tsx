@@ -1,0 +1,85 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
+const GALLERY_ITEMS = [
+  { src: "/images/gallery-addition-1.jpg", location: "Maplewood, NJ", title: "Master Suite Addition" },
+  { src: "/images/service-additions.jpg", location: "South Orange, NJ", title: "Kitchen Expansion" },
+  { src: "/images/gallery-addition-1.jpg", location: "Verona, NJ", title: "Sunroom & Porch" },
+  { src: "/images/service-additions.jpg", location: "Glen Ridge, NJ", title: "In-Law Suite" },
+] as const;
+
+interface GalleryTileProps {
+  src: string;
+  location: string;
+  title: string;
+  className?: string;
+  titleSize?: string;
+}
+
+function GalleryTile({ src, location, title, className = "", titleSize = "text-lg" }: GalleryTileProps) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div className={`relative overflow-hidden ${className}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+      <Image
+        src={src}
+        alt={title}
+        fill
+        className="object-cover transition-transform duration-700"
+        style={{ transform: hovered ? "scale(1.07)" : "scale(1)" }}
+        sizes="(max-width: 1024px) 100vw, 33vw"
+      />
+      <div
+        className="absolute inset-0 flex flex-col justify-end bg-background/70 p-[clamp(16px,2vw,32px)] transition-opacity duration-400"
+        style={{ opacity: hovered ? 1 : 0 }}
+      >
+        <p className="mb-1.5 text-[10px] tracking-[0.2em] uppercase text-secondary">{location}</p>
+        <p className={`font-serif text-foreground ${titleSize}`}>{title}</p>
+      </div>
+    </div>
+  );
+}
+
+export function AdditionsShowcaseSection() {
+  return (
+    <section className="bg-muted/20 py-28 px-6">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p className="mb-5 inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-secondary">
+                <span className="h-px w-6 bg-secondary" />
+                Our Work
+              </p>
+              <h2 className="m-0 font-serif text-foreground" style={{ fontSize: "clamp(36px, 4vw, 52px)" }}>
+                Recent <em className="text-secondary">Projects</em>
+              </h2>
+            </div>
+            <Button asChild variant="outline" className="h-12 border-secondary/40 px-6 text-sm text-secondary hover:bg-secondary/10 hover:text-secondary">
+              <Link href="/gallery">
+                Full Portfolio <ArrowUpRight size={14} className="ml-2" />
+              </Link>
+            </Button>
+          </div>
+
+        <div className="grid gap-1" style={{ gridTemplateColumns: "1.5fr 1fr 1fr", gridTemplateRows: "auto auto" }}>
+            <GalleryTile
+              src="/images/service-additions.jpg"
+              location="Montclair, NJ"
+              title="Two-Story Family Addition"
+              className="row-span-2 min-h-130"
+              titleSize="text-2xl"
+            />
+            {GALLERY_ITEMS.map((item) => (
+              <GalleryTile key={item.title} src={item.src} location={item.location} title={item.title} className="aspect-4/3" titleSize="text-base" />
+            ))}
+          </div>
+      </div>
+    </section>
+  );
+}
