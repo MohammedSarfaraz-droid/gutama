@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { FlatRoofBenefitsSection } from "@/components/services/flat-roof/benefits-section";
 import { FlatRoofCtaSection } from "@/components/services/flat-roof/cta-section";
@@ -11,7 +12,7 @@ import { FlatRoofShowcaseSection } from "@/components/services/flat-roof/showcas
 import { FlatRoofTestimonialSection } from "@/components/services/flat-roof/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Flat Roof Installation & Repair | Essex County, NJ",
+  title: `Flat Roof Installation & Repair | ${siteConfig.business.regionLabel}`,
   description: "Specialized flat roofing systems including TPO, EPDM, and modified bitumen.",
   path: "/services/flat-roof",
 });

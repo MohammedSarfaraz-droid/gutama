@@ -2,8 +2,9 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
+import { siteConfig } from "@/config/site";
 
-const SERVICE_AREA_LABEL = "Proudly Serving Essex County, NJ";
+const SERVICE_AREA_LABEL = `Proudly Serving ${siteConfig.business.regionLabel}`;
 
 const MUNICIPALITIES = [
   { name: "Newark", zip: "07102" },

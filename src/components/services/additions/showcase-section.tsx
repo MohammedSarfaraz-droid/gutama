@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -23,22 +20,16 @@ interface GalleryTileProps {
 }
 
 function GalleryTile({ src, location, title, className = "", titleSize = "text-lg" }: GalleryTileProps) {
-  const [hovered, setHovered] = useState(false);
-
   return (
-    <div className={`relative overflow-hidden ${className}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+    <div className={`group relative overflow-hidden ${className}`}>
       <Image
         src={src}
         alt={title}
         fill
-        className="object-cover transition-transform duration-700"
-        style={{ transform: hovered ? "scale(1.07)" : "scale(1)" }}
+        className="object-cover transition-transform duration-700 group-hover:scale-[1.07]"
         sizes="(max-width: 1024px) 100vw, 33vw"
       />
-      <div
-        className="absolute inset-0 flex flex-col justify-end bg-background/70 p-[clamp(16px,2vw,32px)] transition-opacity duration-400"
-        style={{ opacity: hovered ? 1 : 0 }}
-      >
+      <div className="absolute inset-0 flex flex-col justify-end bg-background/70 p-[clamp(16px,2vw,32px)] opacity-0 transition-opacity duration-400 group-hover:opacity-100">
         <p className="mb-1.5 text-[10px] tracking-[0.2em] uppercase text-secondary">{location}</p>
         <p className={`font-serif text-foreground ${titleSize}`}>{title}</p>
       </div>
@@ -56,7 +47,7 @@ export function AdditionsShowcaseSection() {
                 <span className="h-px w-6 bg-secondary" />
                 Our Work
               </p>
-              <h2 className="m-0 font-serif text-foreground" style={{ fontSize: "clamp(36px, 4vw, 52px)" }}>
+              <h2 className="m-0 font-serif text-[clamp(36px,4vw,52px)] text-foreground">
                 Recent <em className="text-secondary">Projects</em>
               </h2>
             </div>
@@ -67,7 +58,7 @@ export function AdditionsShowcaseSection() {
             </Button>
           </div>
 
-        <div className="grid gap-1" style={{ gridTemplateColumns: "1.5fr 1fr 1fr", gridTemplateRows: "auto auto" }}>
+        <div className="grid grid-cols-[1.5fr_1fr_1fr] grid-rows-[auto_auto] gap-1">
             <GalleryTile
               src="/images/service-additions.jpg"
               location="Montclair, NJ"

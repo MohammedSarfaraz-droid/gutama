@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { SlateRoofBenefitsSection } from "@/components/services/slate-roof/benefits-section";
 import { SlateRoofCtaSection } from "@/components/services/slate-roof/cta-section";
@@ -11,7 +12,7 @@ import { SlateRoofShowcaseSection } from "@/components/services/slate-roof/showc
 import { SlateRoofTestimonialSection } from "@/components/services/slate-roof/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Elegant Slate Roofing | Essex County, NJ",
+  title: `Elegant Slate Roofing | ${siteConfig.business.regionLabel}`,
   description: "Timeless slate roofing installation and repair by experienced craftsmen.",
   path: "/services/slate-roof",
 });

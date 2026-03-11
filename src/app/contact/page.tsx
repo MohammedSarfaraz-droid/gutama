@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
 import { ContactInfoPanel } from "@/components/contact/contact-info-panel";
 import { ContactForm } from "@/components/contact/contact-form-card";
 import { Container } from "@/components/ui/container";
@@ -7,7 +8,7 @@ import { Container } from "@/components/ui/container";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get a free, no-obligation estimate for roofing and exterior projects in Essex County, NJ. Call or fill out our form today.",
+    `Get a free, no-obligation estimate for roofing and exterior projects in ${siteConfig.business.regionLabel}. Call or fill out our form today.`,
 };
 
 export default function ContactPage() {

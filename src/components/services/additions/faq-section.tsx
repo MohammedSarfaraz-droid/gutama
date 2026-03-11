@@ -38,7 +38,7 @@ export function AdditionsFaqSection() {
               <span className="h-px w-6 bg-secondary" />
               FAQ
             </p>
-            <h2 className="mb-7 font-serif leading-snug text-foreground" style={{ fontSize: "clamp(32px, 3.5vw, 48px)" }}>
+            <h2 className="mb-7 font-serif text-[clamp(32px,3.5vw,48px)] leading-snug text-foreground">
               Common
               <br />
               <em className="text-secondary">Questions</em>

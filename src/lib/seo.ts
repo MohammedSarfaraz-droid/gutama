@@ -2,11 +2,6 @@ import type { Metadata } from "next";
 
 import { siteConfig, siteUrl } from "@/config/site";
 
-const BUSINESS_NAME = "Gutama Home Improvement";
-const LEGAL_NAME = "Gutama Home Improvement LLC";
-const DESCRIPTION =
-  "Premium roofing and exterior solutions for residential and commercial properties in Essex County, New Jersey.";
-const REGION = "Essex County, NJ";
 const LOCALE = "en_US";
 
 interface BuildMetadataInput {
@@ -30,7 +25,7 @@ export function buildMetadata({ title, description, path = "/" }: BuildMetadataI
       url,
       type: "website",
       locale: LOCALE,
-      siteName: BUSINESS_NAME,
+      siteName: siteConfig.business.name,
     },
     twitter: {
       card: "summary_large_image",
@@ -44,10 +39,10 @@ export function getLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: BUSINESS_NAME,
-    legalName: LEGAL_NAME,
-    description: DESCRIPTION,
-    areaServed: REGION,
+    name: siteConfig.business.name,
+    legalName: siteConfig.business.legalName,
+    description: siteConfig.business.description,
+    areaServed: siteConfig.business.regionLabel,
     telephone: siteConfig.phones.english,
     email: siteConfig.email,
     address: {

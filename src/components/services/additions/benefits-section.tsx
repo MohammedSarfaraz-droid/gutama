@@ -42,7 +42,7 @@ export function AdditionsBenefitsSection() {
               <span className="h-px w-6 bg-secondary" />
               Why Clients Choose Us
             </p>
-            <h2 className="mb-6 font-serif text-foreground" style={{ fontSize: "clamp(36px, 4vw, 52px)" }}>
+            <h2 className="mb-6 font-serif text-[clamp(36px,4vw,52px)] text-foreground">
               The <em className="text-secondary">Difference</em> You&apos;ll Notice
             </h2>
           </div>

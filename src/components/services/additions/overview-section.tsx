@@ -16,7 +16,7 @@ export function AdditionsOverviewSection() {
             <span className="h-px w-6 bg-secondary" />
             What We Do
           </p>
-          <h2 className="mb-6 font-serif text-foreground leading-snug" style={{ fontSize: "clamp(36px, 4vw, 56px)" }}>
+          <h2 className="mb-6 font-serif text-[clamp(36px,4vw,56px)] leading-snug text-foreground">
             Additions that become
             <br />
             <em className="text-secondary">part of the story</em>
@@ -44,7 +44,7 @@ export function AdditionsOverviewSection() {
 
         <div>
           <div className="relative">
-            <div className="relative overflow-hidden" style={{ aspectRatio: "4/5" }}>
+            <div className="relative aspect-4/5 overflow-hidden">
               <Image
                 src="/images/gallery-addition-1.jpg"
                 alt="Addition craftsmanship detail"

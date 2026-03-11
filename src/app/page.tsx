@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { AboutSection } from "@/components/sections/about-section";
 import { BeforeAfterSection } from "@/components/sections/before-after-section";
@@ -12,13 +13,9 @@ import { ServicesSection } from "@/components/sections/services-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { WhyChooseSection } from "@/components/sections/why-choose-section";
 
-const REGION = "Essex County, NJ";
-const DESCRIPTION =
-  "Premium roofing and exterior solutions for residential and commercial properties in Essex County, New Jersey.";
-
 export const metadata: Metadata = buildMetadata({
-  title: `Roofing & Exterior Contractor | ${REGION}`,
-  description: DESCRIPTION,
+  title: `Roofing & Exterior Contractor | ${siteConfig.business.regionLabel}`,
+  description: siteConfig.business.description,
   path: "/",
 });
 

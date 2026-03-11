@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { siteConfig } from "@/config/site";
 import { services } from "@/data/services";
 import { buildMetadata } from "@/lib/seo";
 import { serviceIconMap } from "@/components/ui/icon-map";
@@ -11,7 +12,7 @@ import { Section } from "@/components/ui/section";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Services | Essex County, NJ",
+  title: `Our Services | ${siteConfig.business.regionLabel}`,
   description:
     "Explore roofing, siding, chimney, gutters, dormers, additions, and emergency repair services offered across Essex County, New Jersey.",
   path: "/services",

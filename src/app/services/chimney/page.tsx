@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { ChimneyBenefitsSection } from "@/components/services/chimney/benefits-section";
 import { ChimneyCtaSection } from "@/components/services/chimney/cta-section";
@@ -11,7 +12,7 @@ import { ChimneyShowcaseSection } from "@/components/services/chimney/showcase-s
 import { ChimneyTestimonialSection } from "@/components/services/chimney/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Chimney Services | Essex County, NJ",
+  title: `Chimney Services | ${siteConfig.business.regionLabel}`,
   description: "Complete chimney repair, rebuilding, flashing, and waterproofing services.",
   path: "/services/chimney",
 });

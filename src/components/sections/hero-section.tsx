@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
 
-const REGION = "Essex County, NJ";
-
 export function HeroSection() {
   return (
     <section id="home" className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
@@ -50,7 +48,7 @@ export function HeroSection() {
         </Reveal>
         <Reveal delay={0.14}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Trusted across {REGION}, delivering high-craftsmanship service for residential and commercial properties.
+            Trusted across {siteConfig.business.regionLabel}, delivering high-craftsmanship service for residential and commercial properties.
           </p>
         </Reveal>
         <Reveal delay={0.2}>

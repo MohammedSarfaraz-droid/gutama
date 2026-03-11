@@ -11,8 +11,6 @@ import { Button } from "@/components/ui/button";
 import { MobileNavMenu } from "@/components/layout/mobile-nav-menu";
 import { cn } from "@/lib/utils";
 
-const BUSINESS_NAME = "Gutama Home Improvement";
-
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
@@ -70,10 +68,10 @@ export function Navbar() {
     <>
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/90 backdrop-blur-xl">
         <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2" aria-label={BUSINESS_NAME}>
+          <Link href="/" className="flex items-center gap-2" aria-label={siteConfig.business.name}>
             <Image
               src="/images/logo2.png"
-              alt={BUSINESS_NAME}
+              alt={siteConfig.business.name}
               width={180}
               height={96}
               priority
@@ -143,7 +141,7 @@ export function Navbar() {
         isOpen={isOpen}
         close={close}
         navLinks={navLinks}
-        businessName={BUSINESS_NAME}
+        businessName={siteConfig.business.name}
         phone={siteConfig.phones.english}
       />
     </>

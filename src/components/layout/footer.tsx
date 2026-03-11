@@ -4,11 +4,6 @@ import { Facebook, Instagram, Mail, MapPin, Music2, Phone } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 
-const BUSINESS_NAME = "Gutama Home Improvement";
-const REGION = "Essex County, NJ";
-const DESCRIPTION =
-  "Premium roofing and exterior solutions for residential and commercial properties in Essex County, New Jersey.";
-
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
@@ -43,9 +38,9 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="/" className="inline-flex">
-            <Image src="/images/logo2.png" alt={BUSINESS_NAME} width={124} height={48} quality={60} sizes="124px" className="h-14 w-auto object-contain" />
+            <Image src="/images/logo2.png" alt={siteConfig.business.name} width={124} height={48} quality={60} sizes="124px" className="h-14 w-auto object-contain" />
           </Link>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{DESCRIPTION}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{siteConfig.business.description}</p>
           <div className="mt-4 space-y-2 text-sm">
             <a href={`tel:${siteConfig.phones.english}`} className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
               <Phone className="h-4 w-4 text-primary" />
@@ -61,7 +56,7 @@ export function Footer() {
             </a>
             <p className="inline-flex items-center gap-2 text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
-              {REGION}
+              {siteConfig.business.regionLabel}
             </p>
           </div>
         </div>
@@ -124,8 +119,8 @@ export function Footer() {
       </div>
 
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-3 border-t border-border/40 px-4 py-5 text-sm text-muted-foreground md:flex-row">
-        <p>© {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.</p>
-        <p>Licensed & Fully Insured | {REGION}</p>
+        <p>© {new Date().getFullYear()} {siteConfig.business.name}. All rights reserved.</p>
+        <p>Licensed & Fully Insured | {siteConfig.business.regionLabel}</p>
       </div>
     </footer>
   );

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Shield } from "lucide-react";
 
+import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Container } from "@/components/ui/container";
@@ -14,7 +15,7 @@ export function AboutSection() {
           <SectionHeading
             eyebrow="Our Story"
             title="Built on Trust, Driven by Excellence"
-            description="Gutama Home Improvement delivers premium roofing and exterior craftsmanship across Essex County with licensed, insured, and bilingual service."
+            description={`${siteConfig.business.name} delivers premium roofing and exterior craftsmanship across ${siteConfig.business.regionLabel} with licensed, insured, and bilingual service.`}
           />
         </Reveal>
 
@@ -23,7 +24,7 @@ export function AboutSection() {
             <div className="glass-card overflow-hidden border">
               <Image
                 src="/images/about-team.jpg"
-                alt="Gutama Home Improvement professional team"
+                alt={`${siteConfig.business.name} professional team`}
                 width={1200}
                 height={800}
                 className="h-auto w-full"

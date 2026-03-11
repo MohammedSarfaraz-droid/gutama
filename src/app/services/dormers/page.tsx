@@ -9,9 +9,10 @@ import { DormersOverviewSection } from "@/components/services/dormers/overview-s
 import { DormersProcessSection } from "@/components/services/dormers/process-section";
 import { DormersShowcaseSection } from "@/components/services/dormers/showcase-section";
 import { DormersTestimonialSection } from "@/components/services/dormers/testimonial-section";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Dormer Installation | Essex County, NJ",
+  title: `Dormer Installation | ${siteConfig.business.regionLabel}`,
   description: "Add natural light, headroom, and value with professionally built dormers.",
   path: "/services/dormers",
 });

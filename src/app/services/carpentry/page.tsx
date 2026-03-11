@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { CarpentryBenefitsSection } from "@/components/services/carpentry/benefits-section";
 import { CarpentryCtaSection } from "@/components/services/carpentry/cta-section";
@@ -11,7 +12,7 @@ import { CarpentryShowcaseSection } from "@/components/services/carpentry/showca
 import { CarpentryTestimonialSection } from "@/components/services/carpentry/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Expert Carpentry Services | Essex County, NJ",
+  title: `Expert Carpentry Services | ${siteConfig.business.regionLabel}`,
   description: "Skilled structural and finish carpentry for repairs and renovations.",
   path: "/services/carpentry",
 });

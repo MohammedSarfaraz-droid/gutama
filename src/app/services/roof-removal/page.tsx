@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
+import { siteConfig } from "@/config/site";
 import { RoofRemovalBenefitsSection } from "@/components/services/roof-removal/benefits-section";
 import { RoofRemovalCtaSection } from "@/components/services/roof-removal/cta-section";
 import { RoofRemovalFaqSection } from "@/components/services/roof-removal/faq-section";
@@ -11,7 +12,7 @@ import { RoofRemovalShowcaseSection } from "@/components/services/roof-removal/s
 import { RoofRemovalTestimonialSection } from "@/components/services/roof-removal/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Professional Roof Removal | Essex County, NJ",
+  title: `Professional Roof Removal | ${siteConfig.business.regionLabel}`,
   description: "Complete tear-off and roof removal with safe disposal and clean site preparation for new installation.",
   path: "/services/roof-removal",
 });

@@ -1,5 +1,3 @@
-"use client";
-
 import { Star } from "lucide-react";
 
 export function AdditionsTestimonialSection() {
@@ -11,7 +9,7 @@ export function AdditionsTestimonialSection() {
             <Star key={i} size={18} fill="currentColor" className="text-secondary" />
           ))}
         </div>
-        <p className="mb-12 font-serif text-foreground italic leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 36px)" }}>
+        <p className="mb-12 font-serif text-[clamp(22px,3vw,36px)] italic leading-relaxed text-foreground">
           &ldquo;From the first site visit to the final walkthrough, the team was meticulous.
           The addition looks like it was always part of the house - the craftsmanship is simply outstanding.&rdquo;
         </p>

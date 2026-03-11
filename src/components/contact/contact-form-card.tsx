@@ -39,24 +39,9 @@ export function ContactForm() {
   };
 
   return (
-    <div
-      className="relative flex min-h-155 flex-col overflow-y-auto border-l border-white/12 bg-[#120d09]/85 backdrop-blur-xl lg:min-h-full"
-      style={{
-        backgroundImage: `
-          radial-gradient(circle at 12% 14%, hsl(0 72% 45% / 0.22) 0%, transparent 42%),
-          radial-gradient(circle at 90% 84%, hsl(43 56% 52% / 0.14) 0%, transparent 40%),
-          linear-gradient(155deg, hsl(20 25% 8% / 0.96) 0%, hsl(18 22% 10% / 0.94) 52%, hsl(16 20% 11% / 0.92) 100%)
-        `,
-      }}
-    >
+    <div className="contact-form-bg relative flex min-h-155 flex-col overflow-y-auto border-l border-white/12 bg-[#120d09]/85 backdrop-blur-xl lg:min-h-full">
       {/* Paper grain texture */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0 opacity-40"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E")`,
-        }}
-        aria-hidden="true"
-      />
+      <div className="paper-grain pointer-events-none absolute inset-0 z-0 opacity-40" aria-hidden="true" />
 
       <div className="relative z-10 flex min-h-full flex-col justify-center px-[clamp(1.75rem,5vw,3.5rem)] py-[clamp(2.3rem,5vw,3.6rem)] max-[900px]:px-7 max-[900px]:py-10">
         {!submitted ? (
@@ -65,10 +50,7 @@ export function ContactForm() {
             <p className="mb-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary opacity-0 animate-[fade-up_0.5s_0.1s_ease_both]">
               Step 01 — Free estimate
             </p>
-            <h2
-              className="font-serif font-bold leading-[1.1] text-[#f6f0e9] opacity-0 animate-[fade-up_0.5s_0.2s_ease_both]"
-              style={{ fontSize: "clamp(1.75rem, 3vw, 2.4rem)" }}
-            >
+            <h2 className="font-serif text-[clamp(1.75rem,3vw,2.4rem)] font-bold leading-[1.1] text-[#f6f0e9] opacity-0 animate-[fade-up_0.5s_0.2s_ease_both]">
               Tell us about<br />
               your <strong className="font-black text-primary">project</strong>
             </h2>

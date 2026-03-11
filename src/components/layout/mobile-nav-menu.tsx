@@ -70,7 +70,6 @@ export function MobileNavMenu({
               key={link.label}
               href={link.href}
               onClick={close}
-              style={{ transitionDelay: isOpen ? `${100 + i * 60}ms` : "0ms" }}
               className={cn(
                 "group relative flex items-center gap-4 border-b border-border/40 px-2 py-4 last:border-b-0",
                 "text-[15px] font-medium uppercase tracking-[0.08em]",
@@ -96,21 +95,7 @@ export function MobileNavMenu({
             </Link>
           ))}
 
-          {/* <a
-            href={`tel:${phone}`}
-            style={{ transitionDelay: isOpen ? `${100 + navLinks.length * 60}ms` : "0ms" }}
-            className={cn(
-              "mt-6 inline-flex items-center gap-3 px-2 py-3",
-              "text-sm text-muted-foreground transition-all duration-300 hover:text-primary",
-              isOpen ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
-            )}
-          >
-            <Phone className="h-4 w-4 text-primary" />
-            {phone}
-          </a> */}
-
           <div
-            style={{ transitionDelay: isOpen ? `${100 + (navLinks.length + 1) * 60}ms` : "0ms" }}
             className={cn(
               "mt-3 transition-all duration-300",
               isOpen ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
@@ -123,7 +108,6 @@ export function MobileNavMenu({
         </nav>
 
         <div
-          style={{ transitionDelay: isOpen ? `${100 + (navLinks.length + 2) * 60}ms` : "0ms" }}
           className={cn(
             "border-t border-border/40 px-8 py-6",
             "transition-all duration-300",

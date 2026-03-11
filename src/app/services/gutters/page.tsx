@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo";
 import { GuttersBenefitsSection } from "@/components/services/gutters/benefits-section";
 import { GuttersCtaSection } from "@/components/services/gutters/cta-section";
@@ -11,7 +12,7 @@ import { GuttersShowcaseSection } from "@/components/services/gutters/showcase-s
 import { GuttersTestimonialSection } from "@/components/services/gutters/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Gutters Installation | Essex County, NJ",
+  title: `Gutters Installation | ${siteConfig.business.regionLabel}`,
   description: "Seamless gutter installation and repair to protect your foundation and landscaping.",
   path: "/services/gutters",
 });

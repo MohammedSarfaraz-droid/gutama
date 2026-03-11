@@ -41,7 +41,7 @@ export function AdditionsProcessSection() {
               <span className="h-px w-6 bg-secondary" />
               How We Build
             </p>
-            <h2 className="mb-7 font-serif text-foreground leading-snug" style={{ fontSize: "clamp(36px, 3.5vw, 52px)" }}>
+            <h2 className="mb-7 font-serif text-[clamp(36px,3.5vw,52px)] leading-snug text-foreground">
               Our
               <br />
               <em className="text-secondary">Process</em>
@@ -61,7 +61,7 @@ export function AdditionsProcessSection() {
         <div className="flex flex-col">
           {PROCESS.map((step, i) => (
             <div key={step.num}>
-              <div className="relative flex gap-7" style={{ paddingBottom: i < PROCESS.length - 1 ? 48 : 0 }}>
+              <div className={["relative flex gap-7", i < PROCESS.length - 1 ? "pb-12" : ""].join(" ")}>
                 {i < PROCESS.length - 1 && (
                   <div className="absolute top-14 bottom-0 left-6.75 w-px bg-linear-to-b from-secondary/40 to-secondary/10" />
                 )}

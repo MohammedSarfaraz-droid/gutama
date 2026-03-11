@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 
+import { siteConfig, siteUrl } from "@/config/site";
 import { getLocalBusinessSchema } from "@/lib/seo";
 import { SiteShell } from "@/components/layout/site-shell";
 
 import "./globals.css";
-
-const BUSINESS_NAME = "Gutama Home Improvement";
-const REGION = "Essex County, NJ";
-const DESCRIPTION =
-  "Premium roofing and exterior solutions for residential and commercial properties in Essex County, New Jersey.";
 
 const bodyFont = Inter({
   variable: "--font-body",
@@ -22,12 +18,12 @@ const headingFont = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gutamahomeimprovement.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: `${BUSINESS_NAME} | ${REGION}`,
-    template: `%s | ${BUSINESS_NAME}`,
+    default: `${siteConfig.business.name} | ${siteConfig.business.regionLabel}`,
+    template: `%s | ${siteConfig.business.name}`,
   },
-  description: DESCRIPTION,
+  description: siteConfig.business.description,
 };
 
 export default function RootLayout({

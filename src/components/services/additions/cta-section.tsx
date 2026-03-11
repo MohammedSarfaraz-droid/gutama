@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
@@ -25,7 +23,7 @@ export function AdditionsCtaSection() {
           <span className="h-px w-6 bg-secondary" />
           Begin Your Project
         </p>
-        <h2 className="mb-5 font-serif leading-none text-foreground" style={{ fontSize: "clamp(38px, 5vw, 64px)" }}>
+        <h2 className="mb-5 font-serif text-[clamp(38px,5vw,64px)] leading-none text-foreground">
           Ready to Expand
           <br />
           <em className="text-secondary">Your Home?</em>
@@ -46,7 +44,7 @@ export function AdditionsCtaSection() {
           </Button>
         </div>
         <p className="mt-7 text-xs tracking-wide text-muted-foreground">
-          No obligation - Licensed & insured - Essex County, NJ
+          No obligation - Licensed & insured - {siteConfig.business.regionLabel}
         </p>
         <div className="mx-auto mt-12 h-14 w-px bg-linear-to-t from-transparent to-secondary/30" />
       </div>

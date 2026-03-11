@@ -30,7 +30,7 @@ export function AdditionsHeroSection() {
         <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
       </div>
 
-      <div className="absolute top-0 bottom-0 z-10 w-px bg-linear-to-b from-transparent via-secondary/40 to-transparent" style={{ left: "max(24px, calc((100vw - 1280px)/2))" }} />
+      <div className="absolute top-0 bottom-0 left-[max(24px,calc((100vw-1280px)/2))] z-10 w-px bg-linear-to-b from-transparent via-secondary/40 to-transparent" />
 
       <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pt-20 pb-24">
         <nav className="mb-10 flex items-center gap-2">
@@ -52,16 +52,16 @@ export function AdditionsHeroSection() {
         <div className="mb-7 inline-flex items-center gap-2 border border-secondary/40 bg-background/30 px-4 py-1.5">
           <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
           <span className="text-[11px] font-medium tracking-[0.22em] uppercase text-secondary">
-            Premium Craftsmanship - Essex County, NJ
+            Premium Craftsmanship - {siteConfig.business.regionLabel}
           </span>
         </div>
 
-        <h1 className="mb-3 font-serif leading-none text-foreground" style={{ fontSize: "clamp(52px, 8vw, 96px)", letterSpacing: "-0.01em" }}>
+        <h1 className="mb-3 font-serif text-[clamp(52px,8vw,96px)] leading-none tracking-[-0.01em] text-foreground">
           Home
           <span className="block italic text-secondary">Additions</span>
         </h1>
 
-        <div className="mb-7 h-px origin-left bg-linear-to-r from-secondary to-secondary/20" style={{ width: 180 }} />
+        <div className="mb-7 h-px w-45 origin-left bg-linear-to-r from-secondary to-secondary/20" />
 
         <p className="mb-12 max-w-lg text-[clamp(15px,1.8vw,19px)] leading-relaxed text-muted-foreground">
           Architect-led expansions that honor your home&apos;s character while delivering
