@@ -1,6 +1,16 @@
 import type { Service } from "@/types/service";
 import { siteConfig } from "@/config/site";
 
+const businessName = (() => {
+  const name = siteConfig.business?.name?.trim();
+  if (!name) {
+    return "Your Company";
+  }
+
+  const normalized = name.toLowerCase();
+  return normalized === "undefined" || normalized === "null" ? "Your Company" : name;
+})();
+
 export const services: Service[] = [
   {
     slug: "roof-removal",
@@ -369,7 +379,7 @@ export const services: Service[] = [
     description:
       "24/7 emergency repair services for storm damage, leaks, and urgent home exterior issues.",
     longDescription:
-      `When disaster strikes, ${siteConfig.business.name} is ready to respond. Our emergency repair team handles storm damage, sudden leaks, fallen trees, and other urgent exterior issues. We provide rapid response to protect your home from further damage with temporary repairs followed by permanent solutions.`,
+      `When disaster strikes, ${businessName} is ready to respond. Our emergency repair team handles storm damage, sudden leaks, fallen trees, and other urgent exterior issues. We provide rapid response to protect your home from further damage with temporary repairs followed by permanent solutions.`,
     process: [
       "Emergency assessment",
       "Temporary protective measures",
