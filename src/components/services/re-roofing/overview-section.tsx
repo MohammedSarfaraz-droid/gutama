@@ -1,32 +1,21 @@
-import { CheckCircle } from "lucide-react";
-
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
+import { ServiceOverviewSection } from "@/components/services/shared/service-sections";
 
 export function ReRoofingOverviewSection() {
   return (
-    <Section className="bg-muted/20">
-      <Container>
-        <div className="grid gap-10 lg:grid-cols-[1.35fr_1fr] lg:items-start">
-          <Reveal className="max-w-3xl">
-            <h2 className="mb-6 font-serif text-3xl font-bold text-foreground md:text-4xl">About This Service</h2>
-            <div className="gold-divider mx-0! mb-6" />
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Our re-roofing service upgrades aging systems with premium materials, precision flashing, and durable installation built for New Jersey weather.
-            </p>
-          </Reveal>
-
-          <Reveal className="glass-card border border-border/40 p-6">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Project Outcomes</p>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Site assessment and planning</span></li>
-              <li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Material and scope confirmation</span></li>
-              <li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Final walkthrough and quality check</span></li>
-            </ul>
-          </Reveal>
-        </div>
-      </Container>
-    </Section>
+    <ServiceOverviewSection
+      content={{
+        title: "Replacement roofing with",
+        accent: "lasting value",
+        paragraphs: [
+          "When a roof reaches the end of its service life, the replacement needs more than new shingles. Deck condition, flashing details, ventilation, underlayment, and edge protection all influence how the next roof will perform.",
+          "We handle re-roofing with a complete system mindset, removing failing materials, correcting problem conditions, and installing a new assembly built for durability, weather resistance, and clean visual finish.",
+        ],
+        bullets: ["Full tear-off replacement", "Deck and flashing review", "Ventilation improvements", "Premium roofing materials"],
+        image: "/images/after-roof.jpg",
+        imageAlt: "Completed re-roofing project",
+        badgeValue: "690+",
+        badgeLabel: "Roofs Replaced",
+      }}
+    />
   );
 }

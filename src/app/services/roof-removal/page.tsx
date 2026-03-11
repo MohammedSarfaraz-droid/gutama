@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
-import { PremiumServicePage } from "@/components/services/premium-service-page";
+import { RoofRemovalBenefitsSection } from "@/components/services/roof-removal/benefits-section";
+import { RoofRemovalCtaSection } from "@/components/services/roof-removal/cta-section";
+import { RoofRemovalFaqSection } from "@/components/services/roof-removal/faq-section";
+import { RoofRemovalHeroSection } from "@/components/services/roof-removal/hero-section";
+import { RoofRemovalOverviewSection } from "@/components/services/roof-removal/overview-section";
+import { RoofRemovalProcessSection } from "@/components/services/roof-removal/process-section";
+import { RoofRemovalShowcaseSection } from "@/components/services/roof-removal/showcase-section";
+import { RoofRemovalTestimonialSection } from "@/components/services/roof-removal/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
   title: "Professional Roof Removal | Essex County, NJ",
@@ -11,16 +18,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <PremiumServicePage
-      serviceLabel="Roof Removal"
-      serviceTitle="Professional"
-      serviceTitleAccent="Roof Removal"
-      heroImage="/images/service-roof-removal.jpg"
-      heroImageAlt="Professional roof removal"
-      shortDescription="Complete tear-off and roof removal with safe disposal and clean site preparation for new installation."
-      overviewText1="Our roof removal crews strip aging roofing systems to the deck with strict site protection and cleanup standards."
-      overviewText2="You get a clean, inspection-ready surface for a reliable new roofing installation."
-      showcaseTitle="Recent"
-    />
+    <div className="bg-background text-foreground selection:bg-secondary/30">
+      <RoofRemovalHeroSection />
+      <RoofRemovalOverviewSection />
+      <RoofRemovalBenefitsSection />
+      <RoofRemovalProcessSection />
+      <RoofRemovalShowcaseSection />
+      <RoofRemovalTestimonialSection />
+      <RoofRemovalFaqSection />
+      <RoofRemovalCtaSection />
+    </div>
   );
 }

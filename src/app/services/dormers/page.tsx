@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
-import { PremiumServicePage } from "@/components/services/premium-service-page";
+import { DormersBenefitsSection } from "@/components/services/dormers/benefits-section";
+import { DormersCtaSection } from "@/components/services/dormers/cta-section";
+import { DormersFaqSection } from "@/components/services/dormers/faq-section";
+import { DormersHeroSection } from "@/components/services/dormers/hero-section";
+import { DormersOverviewSection } from "@/components/services/dormers/overview-section";
+import { DormersProcessSection } from "@/components/services/dormers/process-section";
+import { DormersShowcaseSection } from "@/components/services/dormers/showcase-section";
+import { DormersTestimonialSection } from "@/components/services/dormers/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
   title: "Dormer Installation | Essex County, NJ",
@@ -11,16 +18,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <PremiumServicePage
-      serviceLabel="Dormers"
-      serviceTitle="Dormer"
-      serviceTitleAccent="Installation"
-      heroImage="/images/service-dormers.jpg"
-      heroImageAlt="Dormer installation"
-      shortDescription="Add natural light, headroom, and value with professionally built dormers."
-      overviewText1="Dormers expand usable upper-level space while improving natural light and architectural balance."
-      overviewText2="Our team integrates structure, roofing, and finishing into one coordinated build process."
-      showcaseTitle="Dormer"
-    />
+    <div className="bg-background text-foreground selection:bg-secondary/30">
+      <DormersHeroSection />
+      <DormersOverviewSection />
+      <DormersBenefitsSection />
+      <DormersProcessSection />
+      <DormersShowcaseSection />
+      <DormersTestimonialSection />
+      <DormersFaqSection />
+      <DormersCtaSection />
+    </div>
   );
 }

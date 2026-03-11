@@ -43,7 +43,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="/" className="inline-flex">
-            <Image src="/images/logo2.png" alt={BUSINESS_NAME} width={124} height={48} className="h-14 w-auto object-contain" />
+            <Image src="/images/logo2.png" alt={BUSINESS_NAME} width={124} height={48} quality={60} sizes="124px" className="h-14 w-auto object-contain" />
           </Link>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{DESCRIPTION}</p>
           <div className="mt-4 space-y-2 text-sm">

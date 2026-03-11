@@ -1,17 +1,17 @@
-import { ChevronRight } from "lucide-react";
-
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const FAQS = [
-  { question: "How long does slate roof typically take?", answer: "Timeline depends on scope, access, and weather. We provide a clear schedule before starting." },
-  { question: "Do you provide warranty coverage?", answer: "Yes. Workmanship protection and applicable manufacturer warranties are provided." },
-  { question: "Can you inspect existing conditions first?", answer: "Absolutely. We begin with an on-site inspection and share recommendations before work starts." },
-] as const;
+import { ServiceFaqSection } from "@/components/services/shared/service-sections";
 
 export function SlateRoofFaqSection() {
   return (
-    <Section className="bg-background"><Container><Reveal className="mb-12 text-center"><h2 className="mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Frequently Asked Questions</h2><div className="gold-divider" /></Reveal><div className="mx-auto max-w-3xl space-y-3">{FAQS.map((item) => (<details key={item.question} className="glass-card group overflow-hidden border border-border/40 px-6 py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-foreground marker:content-none"><span>{item.question}</span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" /></summary><p className="mt-3 border-t border-border/30 pt-3 leading-relaxed text-muted-foreground">{item.answer}</p></details>))}</div></Container></Section>
+    <ServiceFaqSection
+      content={{
+        intro: "Still have questions? We can explain slate repair options, flashing compatibility, and how to preserve the life of an aging slate roof.",
+        items: [
+          { q: "Can damaged slate tiles be replaced individually?", a: "Yes. In many cases, selective replacement is possible, provided the surrounding roof remains sound and compatible replacement material can be used." },
+          { q: "Do slate roofs require special flashing materials?", a: "They often benefit from carefully selected flashing details and long-life metals that support the durability of the slate assembly." },
+          { q: "How do you match replacement slates?", a: "We consider size, thickness, tone, and overall visual compatibility so repairs blend as naturally as possible with the existing roof." },
+          { q: "Is slate roofing worth repairing instead of replacing?", a: "Often yes. Because slate can be extremely durable, targeted repairs and flashing corrections may extend its service life significantly when the broader system is still sound." },
+        ],
+      }}
+    />
   );
 }

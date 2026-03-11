@@ -1,11 +1,21 @@
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const STEPS = ["Site assessment and planning", "Material and scope confirmation", "Core installation and build work", "Detail finishing and protection", "Final walkthrough and quality check"] as const;
+import { ServiceProcessSection } from "@/components/services/shared/service-sections";
 
 export function SlateRoofProcessSection() {
   return (
-    <Section className="bg-background"><Container><Reveal className="mb-16 text-center"><span className="text-sm font-medium uppercase tracking-widest text-secondary">How It Works</span><h2 className="mt-3 mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Our Process</h2><div className="gold-divider" /></Reveal><div className="mx-auto max-w-3xl space-y-4">{STEPS.map((step, index) => (<div key={step} className="glass-card relative flex items-start gap-4 p-5"><div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary/10"><span className="font-serif font-bold text-secondary">{index + 1}</span></div><div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-secondary">Step {index + 1}</p><p className="mt-1 font-medium text-foreground">{step}</p></div></div>))}</div></Container></Section>
+    <ServiceProcessSection
+      content={{
+        intro: "Slate roofing demands patience, precision, and detailing choices that respect both the material and the architecture it protects.",
+        timeline: "3-12 Days",
+        timelineNote: "Typical timeline depending on repair extent and access conditions",
+        steps: [
+          { num: "01", title: "Roof Assessment", desc: "We inspect broken slates, flashing details, fastening condition, and the broader health of the slate system." },
+          { num: "02", title: "Repair Strategy", desc: "We define whether selective slate replacement, flashing correction, or a broader restoration scope is needed." },
+          { num: "03", title: "Material Matching", desc: "Replacement slate size, texture, and visual compatibility are considered before installation begins." },
+          { num: "04", title: "Slate & Flashing Work", desc: "Damaged units are replaced and flashing details are repaired or upgraded where needed to restore protection." },
+          { num: "05", title: "Finish Review", desc: "The repaired areas are checked for alignment, visual continuity, and proper installation detailing." },
+          { num: "06", title: "Final Walkthrough", desc: "We review the completed scope with you and explain any recommended maintenance or future monitoring points." },
+        ],
+      }}
+    />
   );
 }

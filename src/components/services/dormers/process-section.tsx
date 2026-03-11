@@ -1,16 +1,21 @@
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const STEPS = ["Site assessment and planning", "Material and scope confirmation", "Core installation and build work", "Detail finishing and protection", "Final walkthrough and quality check"] as const;
+import { ServiceProcessSection } from "@/components/services/shared/service-sections";
 
 export function DormersProcessSection() {
   return (
-    <Section className="bg-background">
-      <Container>
-        <Reveal className="mb-16 text-center"><span className="text-sm font-medium uppercase tracking-widest text-secondary">How It Works</span><h2 className="mt-3 mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Our Process</h2><div className="gold-divider" /></Reveal>
-        <div className="mx-auto max-w-3xl space-y-4">{STEPS.map((step, index) => (<div key={step} className="glass-card relative flex items-start gap-4 p-5"><div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary/10"><span className="font-serif font-bold text-secondary">{index + 1}</span></div><div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-secondary">Step {index + 1}</p><p className="mt-1 font-medium text-foreground">{step}</p></div></div>))}</div>
-      </Container>
-    </Section>
+    <ServiceProcessSection
+      content={{
+        intro: "Dormer construction succeeds when structural framing, roof integration, and exterior detailing are coordinated from day one.",
+        timeline: "3-8 Weeks",
+        timelineNote: "Typical timeline depending on size, structure, and finishing scope",
+        steps: [
+          { num: "01", title: "Site Review & Feasibility", desc: "We review the attic or upper level, roof structure, and the most effective dormer type for your goals." },
+          { num: "02", title: "Design & Approvals", desc: "Plans, dimensions, and municipal permitting are coordinated before field work begins." },
+          { num: "03", title: "Roof Opening & Framing", desc: "The existing roof is opened and the dormer structure is framed with proper load transfer and weather protection." },
+          { num: "04", title: "Envelope Installation", desc: "Roofing, flashing, windows, siding, and exterior trim are installed to make the new dormer watertight." },
+          { num: "05", title: "Interior Integration", desc: "Interior framing, insulation, drywall prep, and finish transitions are completed for a cohesive result." },
+          { num: "06", title: "Final Review", desc: "We inspect fit, finish, and weatherproofing details with you before closing the project." },
+        ],
+      }}
+    />
   );
 }

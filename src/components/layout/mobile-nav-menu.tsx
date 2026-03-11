@@ -57,6 +57,8 @@ export function MobileNavMenu({
               alt={businessName}
               width={150}
               height={64}
+              quality={60}
+              sizes="150px"
               className="h-14 w-auto object-contain"
             />
           </Link>

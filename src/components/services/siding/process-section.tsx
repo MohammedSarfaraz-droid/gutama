@@ -1,11 +1,21 @@
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const STEPS = ["Site assessment and planning", "Material and scope confirmation", "Core installation and build work", "Detail finishing and protection", "Final walkthrough and quality check"] as const;
+import { ServiceProcessSection } from "@/components/services/shared/service-sections";
 
 export function SidingProcessSection() {
   return (
-    <Section className="bg-background"><Container><Reveal className="mb-16 text-center"><span className="text-sm font-medium uppercase tracking-widest text-secondary">How It Works</span><h2 className="mt-3 mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Our Process</h2><div className="gold-divider" /></Reveal><div className="mx-auto max-w-3xl space-y-4">{STEPS.map((step, index) => (<div key={step} className="glass-card relative flex items-start gap-4 p-5"><div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary/10"><span className="font-serif font-bold text-secondary">{index + 1}</span></div><div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-secondary">Step {index + 1}</p><p className="mt-1 font-medium text-foreground">{step}</p></div></div>))}</div></Container></Section>
+    <ServiceProcessSection
+      content={{
+        intro: "A successful siding project depends on preparation, moisture management, straight installation lines, and refined finish detailing.",
+        timeline: "3-8 Days",
+        timelineNote: "Typical timeline depending on size, product, and trim scope",
+        steps: [
+          { num: "01", title: "Exterior Assessment", desc: "We inspect existing siding, trim, moisture exposure points, and any substrate concerns that need to be addressed." },
+          { num: "02", title: "Material & Style Selection", desc: "Siding profile, color, accents, and trim options are selected to fit both performance needs and design goals." },
+          { num: "03", title: "Removal & Surface Prep", desc: "Old materials are removed where required and the wall assembly is prepared for proper installation." },
+          { num: "04", title: "Weather Barrier & Detailing", desc: "Critical layers, flashings, and transition points are installed before the siding itself goes on." },
+          { num: "05", title: "Siding Installation", desc: "Panels, boards, or shingles are installed with consistent spacing, alignment, and clean edge handling." },
+          { num: "06", title: "Trim Finish & Final Review", desc: "We complete the finish details, inspect the full exterior, and review the project with you before closeout." },
+        ],
+      }}
+    />
   );
 }

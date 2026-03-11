@@ -77,6 +77,8 @@ export function Navbar() {
               width={180}
               height={96}
               priority
+              quality={60}
+              sizes="180px"
               className="h-24 w-auto object-contain"
             />
           </Link>

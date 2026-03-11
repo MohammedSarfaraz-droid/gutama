@@ -1,33 +1,21 @@
-import { CheckCircle } from "lucide-react";
-
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
+import { ServiceOverviewSection } from "@/components/services/shared/service-sections";
 
 export function RoofRemovalOverviewSection() {
   return (
-    <Section className="bg-muted/20">
-      <Container>
-        <div className="grid gap-10 lg:grid-cols-[1.35fr_1fr] lg:items-start">
-          <Reveal className="max-w-3xl">
-            <h2 className="mb-6 font-serif text-3xl font-bold text-foreground md:text-4xl">About This Service</h2>
-            <div className="gold-divider mx-0! mb-6" />
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Our roof removal crew strips damaged or aging roofing systems down to the deck, checks substrate condition,
-              and prepares your property for a reliable new installation.
-            </p>
-          </Reveal>
-
-          <Reveal className="glass-card border border-border/40 p-6">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Project Outcomes</p>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Site assessment and planning</span></li>
-              <li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Material and scope confirmation</span></li>
-              <li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Final walkthrough and quality check</span></li>
-            </ul>
-          </Reveal>
-        </div>
-      </Container>
-    </Section>
+    <ServiceOverviewSection
+      content={{
+        title: "Clean removal for a",
+        accent: "better next roof",
+        paragraphs: [
+          "A proper roof replacement starts with disciplined removal. Old roofing has to come off cleanly, debris needs to be controlled, and the deck must be left ready for full inspection and preparation.",
+          "Our roof removal crews protect the property, work efficiently, and leave a clean, inspection-ready surface so the next roofing system can be installed on a dependable foundation.",
+        ],
+        bullets: ["Controlled tear-off", "Clean jobsite practices", "Deck exposure for inspection", "Disposal and site protection"],
+        image: "/images/before-roof.jpg",
+        imageAlt: "Roof tear-off preparation",
+        badgeValue: "740+",
+        badgeLabel: "Roofs Removed",
+      }}
+    />
   );
 }

@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
-import { PremiumServicePage } from "@/components/services/premium-service-page";
+import { CarpentryBenefitsSection } from "@/components/services/carpentry/benefits-section";
+import { CarpentryCtaSection } from "@/components/services/carpentry/cta-section";
+import { CarpentryFaqSection } from "@/components/services/carpentry/faq-section";
+import { CarpentryHeroSection } from "@/components/services/carpentry/hero-section";
+import { CarpentryOverviewSection } from "@/components/services/carpentry/overview-section";
+import { CarpentryProcessSection } from "@/components/services/carpentry/process-section";
+import { CarpentryShowcaseSection } from "@/components/services/carpentry/showcase-section";
+import { CarpentryTestimonialSection } from "@/components/services/carpentry/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
   title: "Expert Carpentry Services | Essex County, NJ",
@@ -11,16 +18,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <PremiumServicePage
-      serviceLabel="Carpentry"
-      serviceTitle="Expert"
-      serviceTitleAccent="Carpentry"
-      heroImage="/images/service-carpentry.jpg"
-      heroImageAlt="Carpentry services"
-      shortDescription="Skilled structural and finish carpentry for repairs and renovations."
-      overviewText1="Our carpentry scope supports structural stability, refined finishes, and long-term exterior performance."
-      overviewText2="From targeted repairs to custom execution, we deliver precise craftsmanship with dependable project flow."
-      showcaseTitle="Craftsmanship"
-    />
+    <div className="bg-background text-foreground selection:bg-secondary/30">
+      <CarpentryHeroSection />
+      <CarpentryOverviewSection />
+      <CarpentryBenefitsSection />
+      <CarpentryProcessSection />
+      <CarpentryShowcaseSection />
+      <CarpentryTestimonialSection />
+      <CarpentryFaqSection />
+      <CarpentryCtaSection />
+    </div>
   );
 }

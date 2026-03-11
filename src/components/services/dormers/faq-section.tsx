@@ -1,22 +1,17 @@
-import { ChevronRight } from "lucide-react";
-
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const FAQS = [
-  { question: "How long does dormers typically take?", answer: "Timeline depends on scope, access, and weather. We provide a clear schedule before starting." },
-  { question: "Do you provide warranty coverage?", answer: "Yes. Workmanship protection and applicable manufacturer warranties are provided." },
-  { question: "Can you inspect existing conditions first?", answer: "Absolutely. We begin with an on-site inspection and share recommendations before work starts." },
-] as const;
+import { ServiceFaqSection } from "@/components/services/shared/service-sections";
 
 export function DormersFaqSection() {
   return (
-    <Section className="bg-background">
-      <Container>
-        <Reveal className="mb-12 text-center"><h2 className="mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Frequently Asked Questions</h2><div className="gold-divider" /></Reveal>
-        <div className="mx-auto max-w-3xl space-y-3">{FAQS.map((item) => (<details key={item.question} className="glass-card group overflow-hidden border border-border/40 px-6 py-4"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-foreground marker:content-none"><span>{item.question}</span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" /></summary><p className="mt-3 border-t border-border/30 pt-3 leading-relaxed text-muted-foreground">{item.answer}</p></details>))}</div>
-      </Container>
-    </Section>
+    <ServiceFaqSection
+      content={{
+        intro: "Still have questions? Our team can explain dormer options, structural considerations, and how the build affects roof performance.",
+        items: [
+          { q: "What type of dormer is right for my home?", a: "That depends on your roof structure, desired interior space, and architectural style. We review the layout and recommend the dormer type that balances function and curb appeal." },
+          { q: "Will a dormer require structural changes?", a: "Usually yes. A dormer involves roof framing modifications and load support planning, which is why structural review is a key part of the process." },
+          { q: "Can you match my existing roofing and siding?", a: "We always aim to match roofing, siding, trim, and windows closely so the dormer reads as part of the original home." },
+          { q: "How disruptive is dormer construction?", a: "There is active roof and framing work involved, but we sequence the build to protect the home quickly and limit disruption as much as possible." },
+        ],
+      }}
+    />
   );
 }

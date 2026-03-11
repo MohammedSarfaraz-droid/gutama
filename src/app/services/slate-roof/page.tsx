@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
-import { PremiumServicePage } from "@/components/services/premium-service-page";
+import { SlateRoofBenefitsSection } from "@/components/services/slate-roof/benefits-section";
+import { SlateRoofCtaSection } from "@/components/services/slate-roof/cta-section";
+import { SlateRoofFaqSection } from "@/components/services/slate-roof/faq-section";
+import { SlateRoofHeroSection } from "@/components/services/slate-roof/hero-section";
+import { SlateRoofOverviewSection } from "@/components/services/slate-roof/overview-section";
+import { SlateRoofProcessSection } from "@/components/services/slate-roof/process-section";
+import { SlateRoofShowcaseSection } from "@/components/services/slate-roof/showcase-section";
+import { SlateRoofTestimonialSection } from "@/components/services/slate-roof/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
   title: "Elegant Slate Roofing | Essex County, NJ",
@@ -11,16 +18,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <PremiumServicePage
-      serviceLabel="Slate Roof"
-      serviceTitle="Elegant"
-      serviceTitleAccent="Slate Roofing"
-      heroImage="/images/service-slate-roof.jpg"
-      heroImageAlt="Slate roofing"
-      shortDescription="Timeless slate roofing installation and repair by experienced craftsmen."
-      overviewText1="Slate roofing demands specialized handling, precision installation, and heritage-level detailing."
-      overviewText2="We combine traditional craftsmanship with modern protection methods for long-lasting results."
-      showcaseTitle="Signature"
-    />
+    <div className="bg-background text-foreground selection:bg-secondary/30">
+      <SlateRoofHeroSection />
+      <SlateRoofOverviewSection />
+      <SlateRoofBenefitsSection />
+      <SlateRoofProcessSection />
+      <SlateRoofShowcaseSection />
+      <SlateRoofTestimonialSection />
+      <SlateRoofFaqSection />
+      <SlateRoofCtaSection />
+    </div>
   );
 }

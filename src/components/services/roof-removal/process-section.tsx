@@ -1,39 +1,21 @@
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const STEPS = [
-  "Site assessment and planning",
-  "Material and scope confirmation",
-  "Core installation and build work",
-  "Detail finishing and protection",
-  "Final walkthrough and quality check",
-] as const;
+import { ServiceProcessSection } from "@/components/services/shared/service-sections";
 
 export function RoofRemovalProcessSection() {
   return (
-    <Section className="bg-background">
-      <Container>
-        <Reveal className="mb-16 text-center">
-          <span className="text-sm font-medium uppercase tracking-widest text-secondary">How It Works</span>
-          <h2 className="mt-3 mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Our Process</h2>
-          <div className="gold-divider" />
-        </Reveal>
-
-        <div className="mx-auto max-w-3xl space-y-4">
-          {STEPS.map((step, index) => (
-            <div key={step} className="glass-card relative flex items-start gap-4 p-5">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary/10">
-                <span className="font-serif font-bold text-secondary">{index + 1}</span>
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-secondary">Step {index + 1}</p>
-                <p className="mt-1 font-medium text-foreground">{step}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </Section>
+    <ServiceProcessSection
+      content={{
+        intro: "Disciplined removal protects the property, exposes real deck conditions, and creates the right base for whatever comes next.",
+        timeline: "1-3 Days",
+        timelineNote: "Typical timeline depending on roof size, layers, and access",
+        steps: [
+          { num: "01", title: "Pre-Job Protection", desc: "We protect the work zone, surrounding landscaping, and access areas before tear-off begins." },
+          { num: "02", title: "Material Removal", desc: "Existing shingles or roofing layers are removed systematically to maintain control and reduce unnecessary mess." },
+          { num: "03", title: "Debris Containment", desc: "Debris is collected continuously to keep the site safer, cleaner, and more manageable throughout the project." },
+          { num: "04", title: "Deck Exposure", desc: "The roof deck is fully exposed so soft spots, moisture damage, and substrate issues can be identified accurately." },
+          { num: "05", title: "Cleanup & Disposal", desc: "Removed material is cleared from the site and disposal is handled as part of the project scope." },
+          { num: "06", title: "Ready-for-Next-Phase Review", desc: "We confirm the deck condition and transition the project cleanly into repair or replacement work." },
+        ],
+      }}
+    />
   );
 }

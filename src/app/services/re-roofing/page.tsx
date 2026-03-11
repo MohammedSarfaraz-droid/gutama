@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
-import { PremiumServicePage } from "@/components/services/premium-service-page";
+import { ReRoofingBenefitsSection } from "@/components/services/re-roofing/benefits-section";
+import { ReRoofingCtaSection } from "@/components/services/re-roofing/cta-section";
+import { ReRoofingFaqSection } from "@/components/services/re-roofing/faq-section";
+import { ReRoofingHeroSection } from "@/components/services/re-roofing/hero-section";
+import { ReRoofingOverviewSection } from "@/components/services/re-roofing/overview-section";
+import { ReRoofingProcessSection } from "@/components/services/re-roofing/process-section";
+import { ReRoofingShowcaseSection } from "@/components/services/re-roofing/showcase-section";
+import { ReRoofingTestimonialSection } from "@/components/services/re-roofing/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
   title: "Expert Re-Roofing Solutions | Essex County, NJ",
@@ -11,16 +18,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <PremiumServicePage
-      serviceLabel="Re-Roofing"
-      serviceTitle="Expert"
-      serviceTitleAccent="Re-Roofing"
-      heroImage="/images/service-re-roofing.jpg"
-      heroImageAlt="Expert re-roofing"
-      shortDescription="Premium re-roofing services using top-quality materials for lasting protection and curb appeal."
-      overviewText1="We replace aging roofing systems with modern materials selected for performance and aesthetics."
-      overviewText2="From prep to final detail, our process is built for durability, weather resistance, and clean finishing."
-      showcaseTitle="Completed"
-    />
+    <div className="bg-background text-foreground selection:bg-secondary/30">
+      <ReRoofingHeroSection />
+      <ReRoofingOverviewSection />
+      <ReRoofingBenefitsSection />
+      <ReRoofingProcessSection />
+      <ReRoofingShowcaseSection />
+      <ReRoofingTestimonialSection />
+      <ReRoofingFaqSection />
+      <ReRoofingCtaSection />
+    </div>
   );
 }

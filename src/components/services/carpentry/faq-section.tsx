@@ -1,29 +1,17 @@
-import { ChevronRight } from "lucide-react";
-
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const FAQS = [
-  { question: "How long does carpentry typically take?", answer: "Timeline depends on scope, access, and weather. We provide a clear schedule before starting." },
-  { question: "Do you provide warranty coverage?", answer: "Yes. Workmanship protection and applicable manufacturer warranties are provided." },
-  { question: "Can you inspect existing conditions first?", answer: "Absolutely. We begin with an on-site inspection and share recommendations before work starts." },
-] as const;
+import { ServiceFaqSection } from "@/components/services/shared/service-sections";
 
 export function CarpentryFaqSection() {
   return (
-    <Section className="bg-background">
-      <Container>
-        <Reveal className="mb-12 text-center"><h2 className="mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Frequently Asked Questions</h2><div className="gold-divider" /></Reveal>
-        <div className="mx-auto max-w-3xl space-y-3">
-          {FAQS.map((item) => (
-            <details key={item.question} className="glass-card group overflow-hidden border border-border/40 px-6 py-4">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-foreground marker:content-none"><span>{item.question}</span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" /></summary>
-              <p className="mt-3 border-t border-border/30 pt-3 leading-relaxed text-muted-foreground">{item.answer}</p>
-            </details>
-          ))}
-        </div>
-      </Container>
-    </Section>
+    <ServiceFaqSection
+      content={{
+        intro: "Still have questions? Our carpentry specialists can walk you through repair strategy, materials, and finish options.",
+        items: [
+          { q: "Do you handle both structural and finish carpentry?", a: "Yes. We manage framing corrections, exterior trim, fascia, soffits, decorative millwork, and finish carpentry details as part of one coordinated scope." },
+          { q: "Can you match existing woodwork and trim profiles?", a: "In most cases, yes. We source close matches or fabricate compatible profiles so new work blends with your existing architecture." },
+          { q: "How do you determine whether wood should be repaired or replaced?", a: "We inspect for rot depth, moisture damage, and structural compromise. If material can be stabilized reliably, we recommend repair; otherwise replacement is the safer option." },
+          { q: "Do you provide painting or finishing after carpentry work?", a: "We can prepare surfaces for paint or finish and coordinate the final protective coating as part of the overall project scope." },
+        ],
+      }}
+    />
   );
 }

@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 
 import { buildMetadata } from "@/lib/seo";
-import { PremiumServicePage } from "@/components/services/premium-service-page";
+import { ChimneyBenefitsSection } from "@/components/services/chimney/benefits-section";
+import { ChimneyCtaSection } from "@/components/services/chimney/cta-section";
+import { ChimneyFaqSection } from "@/components/services/chimney/faq-section";
+import { ChimneyHeroSection } from "@/components/services/chimney/hero-section";
+import { ChimneyOverviewSection } from "@/components/services/chimney/overview-section";
+import { ChimneyProcessSection } from "@/components/services/chimney/process-section";
+import { ChimneyShowcaseSection } from "@/components/services/chimney/showcase-section";
+import { ChimneyTestimonialSection } from "@/components/services/chimney/testimonial-section";
 
 export const metadata: Metadata = buildMetadata({
   title: "Chimney Services | Essex County, NJ",
@@ -11,16 +18,15 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Page() {
   return (
-    <PremiumServicePage
-      serviceLabel="Chimney"
-      serviceTitle="Chimney"
-      serviceTitleAccent="Services"
-      heroImage="/images/service-chimney.jpg"
-      heroImageAlt="Chimney services"
-      shortDescription="Complete chimney repair, rebuilding, flashing, and waterproofing services."
-      overviewText1="From flashing corrections to structural rebuilds, we restore safety and weather resistance."
-      overviewText2="Every chimney project is completed with code-focused detailing and long-term protection in mind."
-      showcaseTitle="Restoration"
-    />
+    <div className="bg-background text-foreground selection:bg-secondary/30">
+      <ChimneyHeroSection />
+      <ChimneyOverviewSection />
+      <ChimneyBenefitsSection />
+      <ChimneyProcessSection />
+      <ChimneyShowcaseSection />
+      <ChimneyTestimonialSection />
+      <ChimneyFaqSection />
+      <ChimneyCtaSection />
+    </div>
   );
 }

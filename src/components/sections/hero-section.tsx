@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 
@@ -12,7 +13,15 @@ export function HeroSection() {
   return (
     <section id="home" className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/images/hero-bg3.png')] bg-cover bg-center" />
+        <Image
+          src="/images/hero-bg3.png"
+          alt=""
+          fill
+          priority
+          quality={60}
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-background/30" />
       </div>
 

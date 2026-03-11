@@ -1,38 +1,21 @@
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const STEPS = [
-  "Site assessment and planning",
-  "Material and scope confirmation",
-  "Core installation and build work",
-  "Detail finishing and protection",
-  "Final walkthrough and quality check",
-] as const;
+import { ServiceProcessSection } from "@/components/services/shared/service-sections";
 
 export function CarpentryProcessSection() {
   return (
-    <Section className="bg-background">
-      <Container>
-        <Reveal className="mb-16 text-center">
-          <span className="text-sm font-medium uppercase tracking-widest text-secondary">How It Works</span>
-          <h2 className="mt-3 mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Our Process</h2>
-          <div className="gold-divider" />
-        </Reveal>
-        <div className="mx-auto max-w-3xl space-y-4">
-          {STEPS.map((step, index) => (
-            <div key={step} className="glass-card relative flex items-start gap-4 p-5">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary/10">
-                <span className="font-serif font-bold text-secondary">{index + 1}</span>
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-secondary">Step {index + 1}</p>
-                <p className="mt-1 font-medium text-foreground">{step}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </Section>
+    <ServiceProcessSection
+      content={{
+        intro: "A disciplined carpentry process keeps layout, fit, and finish aligned from the first measurement to the final walkthrough.",
+        timeline: "3-10 Days",
+        timelineNote: "Typical timeline depending on repair scope and finish complexity",
+        steps: [
+          { num: "01", title: "Assessment & Measurements", desc: "We inspect existing conditions, identify structural concerns, and confirm exact dimensions." },
+          { num: "02", title: "Scope & Material Planning", desc: "Material selections, repair strategy, and sequencing are finalized before fabrication begins." },
+          { num: "03", title: "Preparation & Protection", desc: "Work areas are protected and damaged materials are removed with care to preserve adjacent finishes." },
+          { num: "04", title: "Build & Installation", desc: "Framing, trim, panels, or specialty woodwork are installed with tight tolerances and clean alignment." },
+          { num: "05", title: "Finish Detailing", desc: "Joints, edges, transitions, and exposed surfaces are refined for a polished final appearance." },
+          { num: "06", title: "Final Review", desc: "We walk the completed scope with you, verify quality, and address any finishing touches before sign-off." },
+        ],
+      }}
+    />
   );
 }

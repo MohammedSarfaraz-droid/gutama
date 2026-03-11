@@ -1,11 +1,21 @@
-import { CheckCircle } from "lucide-react";
-
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
+import { ServiceOverviewSection } from "@/components/services/shared/service-sections";
 
 export function GuttersOverviewSection() {
   return (
-    <Section className="bg-muted/20"><Container><div className="grid gap-10 lg:grid-cols-[1.35fr_1fr] lg:items-start"><Reveal className="max-w-3xl"><h2 className="mb-6 font-serif text-3xl font-bold text-foreground md:text-4xl">About This Service</h2><div className="gold-divider mx-0! mb-6" /><p className="text-lg leading-relaxed text-muted-foreground">We fabricate and install seamless gutter systems to direct runoff correctly and reduce water intrusion risks around foundations.</p></Reveal><Reveal className="glass-card border border-border/40 p-6"><p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Project Outcomes</p><ul className="space-y-3"><li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Site assessment and planning</span></li><li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Material and scope confirmation</span></li><li className="flex items-start gap-3"><CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-secondary" /><span className="text-sm leading-relaxed text-muted-foreground">Final walkthrough and quality check</span></li></ul></Reveal></div></Container></Section>
+    <ServiceOverviewSection
+      content={{
+        title: "Water management that",
+        accent: "actually protects",
+        paragraphs: [
+          "A gutter system only works when the sizing, pitch, downspout placement, and fastening method are all correct. Poor layout can lead to overflow, fascia damage, siding staining, and foundation issues.",
+          "We install and repair seamless gutter systems that move water efficiently away from the home while keeping the roof edge, trim, and surrounding landscape better protected year-round.",
+        ],
+        bullets: ["Seamless gutter installation", "Downspout optimization", "Fascia protection", "Targeted gutter repairs"],
+        image: "/images/about-aerial.jpg",
+        imageAlt: "Exterior drainage planning",
+        badgeValue: "520+",
+        badgeLabel: "Systems Installed",
+      }}
+    />
   );
 }

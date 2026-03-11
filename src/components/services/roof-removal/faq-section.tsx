@@ -1,45 +1,17 @@
-import { ChevronRight } from "lucide-react";
-
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const FAQS = [
-  {
-    question: "How long does roof removal typically take?",
-    answer: "Timeline depends on scope, access, and weather. We provide a clear schedule before starting.",
-  },
-  {
-    question: "Do you provide warranty coverage?",
-    answer: "Yes. Workmanship protection and applicable manufacturer warranties are provided.",
-  },
-  {
-    question: "Can you inspect existing conditions first?",
-    answer: "Absolutely. We begin with an on-site inspection and share recommendations before work starts.",
-  },
-] as const;
+import { ServiceFaqSection } from "@/components/services/shared/service-sections";
 
 export function RoofRemovalFaqSection() {
   return (
-    <Section className="bg-background">
-      <Container>
-        <Reveal className="mb-12 text-center">
-          <h2 className="mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Frequently Asked Questions</h2>
-          <div className="gold-divider" />
-        </Reveal>
-
-        <div className="mx-auto max-w-3xl space-y-3">
-          {FAQS.map((item) => (
-            <details key={item.question} className="glass-card group overflow-hidden border border-border/40 px-6 py-4">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-foreground marker:content-none">
-                <span>{item.question}</span>
-                <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-90" />
-              </summary>
-              <p className="mt-3 border-t border-border/30 pt-3 leading-relaxed text-muted-foreground">{item.answer}</p>
-            </details>
-          ))}
-        </div>
-      </Container>
-    </Section>
+    <ServiceFaqSection
+      content={{
+        intro: "Still have questions? We can explain the tear-off process, cleanup standards, and what deck issues may only be visible once the old roof is removed.",
+        items: [
+          { q: "Why is full roof removal better than layering over old roofing?", a: "Removing the old roof allows proper deck inspection, reduces excess weight, and gives the new system a cleaner, more reliable substrate for installation." },
+          { q: "Will you inspect the deck after removal?", a: "Yes. Once the old roofing is off, we evaluate the exposed substrate for soft spots, moisture damage, and any required repairs before the next phase begins." },
+          { q: "How do you protect landscaping and surrounding areas?", a: "We use site protection measures, controlled debris handling, and continuous cleanup to reduce risk to nearby surfaces and plantings." },
+          { q: "Is disposal included in roof removal?", a: "Yes. Material disposal is part of the removal scope so the site is left clean and ready for continued work." },
+        ],
+      }}
+    />
   );
 }

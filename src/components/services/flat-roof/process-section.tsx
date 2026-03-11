@@ -1,39 +1,21 @@
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Section } from "@/components/ui/section";
-
-const STEPS = [
-  "Site assessment and planning",
-  "Material and scope confirmation",
-  "Core installation and build work",
-  "Detail finishing and protection",
-  "Final walkthrough and quality check",
-] as const;
+import { ServiceProcessSection } from "@/components/services/shared/service-sections";
 
 export function FlatRoofProcessSection() {
   return (
-    <Section className="bg-background">
-      <Container>
-        <Reveal className="mb-16 text-center">
-          <span className="text-sm font-medium uppercase tracking-widest text-secondary">How It Works</span>
-          <h2 className="mt-3 mb-4 font-serif text-3xl font-bold text-foreground md:text-4xl">Our Process</h2>
-          <div className="gold-divider" />
-        </Reveal>
-
-        <div className="mx-auto max-w-3xl space-y-4">
-          {STEPS.map((step, index) => (
-            <div key={step} className="glass-card relative flex items-start gap-4 p-5">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary/10">
-                <span className="font-serif font-bold text-secondary">{index + 1}</span>
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-secondary">Step {index + 1}</p>
-                <p className="mt-1 font-medium text-foreground">{step}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Container>
-    </Section>
+    <ServiceProcessSection
+      content={{
+        intro: "A strong flat roof depends on disciplined sequencing, substrate preparation, and exact membrane detailing at every transition.",
+        timeline: "3-10 Days",
+        timelineNote: "Typical timeline for replacement or targeted flat roof restoration",
+        steps: [
+          { num: "01", title: "Roof Assessment", desc: "We inspect membrane condition, insulation, drainage patterns, flashing details, and any areas of ponding or open seams." },
+          { num: "02", title: "System Recommendation", desc: "You receive guidance on repair, restoration, or full replacement based on the age and condition of the current roof." },
+          { num: "03", title: "Surface Prep", desc: "Existing materials are prepared or removed, the substrate is corrected, and insulation or cover boards are installed as needed." },
+          { num: "04", title: "Membrane Installation", desc: "The selected flat roofing system is installed with attention to seams, fastening, adhesion, and perimeter details." },
+          { num: "05", title: "Flashing & Drainage", desc: "Parapets, curbs, edges, penetrations, and drains are detailed to complete the watertight assembly." },
+          { num: "06", title: "Final Inspection", desc: "We review seams, terminations, drainage function, and finish quality before project closeout." },
+        ],
+      }}
+    />
   );
 }

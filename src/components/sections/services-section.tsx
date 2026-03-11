@@ -34,6 +34,7 @@ export function ServicesSection() {
                         src={service.image}
                         alt={service.shortTitle}
                         fill
+                        quality={60}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
