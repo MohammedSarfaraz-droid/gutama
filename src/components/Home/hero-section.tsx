@@ -47,7 +47,7 @@ export function HeroSection() {
           </h1>
         </Reveal>
         <Reveal delay={0.14}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-[#FFFFFF] md:text-xl">
             Trusted across {siteConfig.business.regionLabel}, delivering high-craftsmanship service for residential and commercial properties.
           </p>
         </Reveal>
