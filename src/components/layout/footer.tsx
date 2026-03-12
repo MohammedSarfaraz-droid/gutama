@@ -107,9 +107,9 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Follow us on ${label}`}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-border/60 text-muted-foreground transition-all hover:border-primary/50 hover:bg-primary/5 hover:text-primary"
+                    className="group inline-flex h-11 w-11 items-center justify-center rounded-md border border-border/70 bg-card/40 text-foreground/70 shadow-[0_10px_24px_-16px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary/60 hover:bg-secondary/10 hover:text-secondary hover:shadow-luxury"
                   >
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-[18px] w-[18px] transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(201,159,58,0.45)]" />
                   </a>
                 ))}
               </div>
