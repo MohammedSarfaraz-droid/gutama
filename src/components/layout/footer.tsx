@@ -109,7 +109,7 @@ export function Footer() {
                     aria-label={`Follow us on ${label}`}
                     className="group inline-flex h-11 w-11 items-center justify-center rounded-md border border-border/70 bg-card/40 text-foreground/70 shadow-[0_10px_24px_-16px_rgba(0,0,0,0.9)] transition-all duration-300 hover:-translate-y-0.5 hover:border-secondary/60 hover:bg-secondary/10 hover:text-secondary hover:shadow-luxury"
                   >
-                    <Icon className="h-[18px] w-[18px] transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(201,159,58,0.45)]" />
+                    <Icon className="h-4.5 w-4.5 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(201,159,58,0.45)]" />
                   </a>
                 ))}
               </div>
