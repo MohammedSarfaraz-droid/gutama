@@ -47,16 +47,16 @@ export function ContactForm() {
         {!submitted ? (
           <>
             {/* Header */}
-            <p className="mb-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary opacity-0 animate-[fade-up_0.5s_0.1s_ease_both]">
+            <p className="mb-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary opacity-0 animate-[fade-up_0.3s_0.05s_ease_both]">
               Step 01 — Free estimate
             </p>
-            <h2 className="font-serif text-[clamp(1.75rem,3vw,2.4rem)] font-bold leading-[1.1] text-[#f6f0e9] opacity-0 animate-[fade-up_0.5s_0.2s_ease_both]">
+            <h2 className="font-serif text-[clamp(1.75rem,3vw,2.4rem)] font-bold leading-[1.1] text-[#f6f0e9] opacity-0 animate-[fade-up_0.3s_0.1s_ease_both]">
               Tell us about<br />
               your <strong className="font-black text-primary">project</strong>
             </h2>
 
             {/* Step progress dots */}
-            <div className="mt-4 mb-7 flex gap-1 opacity-0 animate-[fade-in_0.5s_0.35s_ease_both]">
+            <div className="mt-4 mb-7 flex gap-1 opacity-0 animate-[fade-in_0.3s_0.15s_ease_both]">
               {[true, step2, step3].map((active, i) => (
                 <div
                   key={i}

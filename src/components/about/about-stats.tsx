@@ -30,7 +30,7 @@ export function AboutStats() {
 
         <StaggerGroup
           className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5"
-          delay={0.07}
+          delay={0.05}
         >
           {STATS.map((stat) => (
             <StaggerItem key={stat.label}>

@@ -9,26 +9,44 @@ import { Section } from "@/components/ui/section";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 import { services } from "@/data/services";
 
-export function ServicesSection() {
-  return (
-    <Section id="services" className="bg-background">
-      <Container>
-        <Reveal>
-          <SectionHeading
-            eyebrow="What We Do"
-            title="Our Services"
-            description="Comprehensive roofing and exterior solutions tailored to your needs."
-          />
-        </Reveal>
+type ServicesSectionProps = {
+  id?: string;
+  showHeading?: boolean;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  ctaLabel?: string;
+  descriptionClampClassName?: string;
+  cardClassName?: string;
+};
 
-        <StaggerGroup className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" delay={0.08}>
+export function ServicesSection({
+  id = "services",
+  showHeading = true,
+  eyebrow = "What We Do",
+  title = "Our Services",
+  description = "Comprehensive roofing and exterior solutions tailored to your needs.",
+  ctaLabel = "Learn More",
+  descriptionClampClassName = "line-clamp-2",
+  cardClassName = "",
+}: ServicesSectionProps = {}) {
+  return (
+    <Section id={id} className="bg-background">
+      <Container>
+        {showHeading ? (
+          <Reveal>
+            <SectionHeading eyebrow={eyebrow} title={title} description={description} />
+          </Reveal>
+        ) : null}
+
+        <StaggerGroup className={`${showHeading ? "mt-12" : ""} grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`.trim()} delay={0.08}>
           {services.map((service) => {
             const Icon = serviceIconMap[service.icon];
 
             return (
               <StaggerItem key={service.slug}>
-                <Link href={`/services/${service.slug}`} className="group block">
-                  <article className="glass-card overflow-hidden border transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-luxury">
+                <Link href={`/services/${service.slug}`} className={`group block ${cardClassName ? "h-full" : ""}`.trim()}>
+                  <article className={`glass-card overflow-hidden border transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-luxury ${cardClassName}`.trim()}>
                     <div className="relative h-44 overflow-hidden">
                       <Image
                         src={service.image}
@@ -45,9 +63,9 @@ export function ServicesSection() {
                     </div>
                     <div className="p-5">
                       <h3 className="font-serif text-lg font-semibold text-foreground">{service.shortTitle}</h3>
-                      <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+                      <p className={`mt-2 text-sm leading-relaxed text-muted-foreground ${descriptionClampClassName}`.trim()}>{service.description}</p>
                       <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary transition-all group-hover:gap-2">
-                        Learn More
+                        {ctaLabel}
                         <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>

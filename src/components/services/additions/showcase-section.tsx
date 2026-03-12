@@ -29,7 +29,7 @@ function GalleryTile({ src, location, title, className = "", titleSize = "text-l
         className="object-cover transition-transform duration-700 group-hover:scale-[1.07]"
         sizes="(max-width: 1024px) 100vw, 33vw"
       />
-      <div className="absolute inset-0 flex flex-col justify-end bg-background/70 p-[clamp(16px,2vw,32px)] opacity-0 transition-opacity duration-[400ms] group-hover:opacity-100">
+      <div className="absolute inset-0 flex flex-col justify-end bg-background/70 p-[clamp(16px,2vw,32px)] opacity-0 transition-opacity duration-400  group-hover:opacity-100">
         <p className="mb-1.5 text-[10px] tracking-[0.2em] uppercase text-secondary">{location}</p>
         <p className={`font-serif text-foreground ${titleSize}`}>{title}</p>
       </div>
@@ -39,7 +39,7 @@ function GalleryTile({ src, location, title, className = "", titleSize = "text-l
 
 export function AdditionsShowcaseSection() {
   return (
-    <section className="bg-muted/20 py-28 px-6">
+    <section className="bg-muted/20 py-16 px-4 md:py-28 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
             <div>
@@ -58,12 +58,12 @@ export function AdditionsShowcaseSection() {
             </Button>
           </div>
 
-        <div className="grid grid-cols-[1.5fr_1fr_1fr] grid-rows-[auto_auto] gap-1">
+        <div className="grid grid-cols-2 gap-1.5 lg:grid-cols-[1.5fr_1fr_1fr] lg:grid-rows-[auto_auto] lg:gap-1">
             <GalleryTile
               src="/images/service-additions.jpg"
               location="Montclair, NJ"
               title="Two-Story Family Addition"
-              className="row-span-2 min-h-130"
+              className="col-span-2 min-h-60 lg:col-span-1 lg:row-span-2 lg:min-h-130"
               titleSize="text-2xl"
             />
             {GALLERY_ITEMS.map((item) => (

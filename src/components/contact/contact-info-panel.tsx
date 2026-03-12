@@ -43,26 +43,26 @@ export function ContactInfoPanel() {
 
           {/* LEFT: Eyebrow + Headline + Accent rule */}
           <div className="flex-1">
-            <div className="mb-5 inline-flex items-center gap-2 opacity-0 animate-[fade-up_0.6s_0.15s_ease_both]">
+            <div className="mb-5 inline-flex items-center gap-2 opacity-0 animate-[fade-up_0.35s_0.05s_ease_both]">
               <div className="h-1.25 w-1.25 rounded-full bg-primary" />
               <span className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white/45">
                 {siteConfig.business.regionLabel} · Since {siteConfig.business.foundedYear}
               </span>
             </div>
 
-            <h1 className="mb-7 font-serif text-[clamp(2.4rem,4vw,3.6rem)] font-black leading-none text-white opacity-0 animate-[fade-up_0.65s_0.25s_ease_both]">
+            <h1 className="mb-7 font-serif text-[clamp(2.4rem,4vw,3.6rem)] font-black leading-none text-white opacity-0 animate-[fade-up_0.35s_0.1s_ease_both]">
               Your home<br />deserves
               <em className="block not-italic text-primary">the best.</em>
             </h1>
 
-            <div className="h-0.75 w-11 origin-left scale-x-0 bg-primary animate-[scale-x-in_0.5s_0.4s_ease_both]" />
+            <div className="h-0.75 w-11 origin-left scale-x-0 bg-primary animate-[scale-x-in_0.3s_0.15s_ease_both]" />
           </div>
 
           {/* Vertical divider (sm+) */}
           <div className="hidden sm:block w-px self-stretch bg-white/10" />
 
           {/* RIGHT: Contact links + Hours */}
-          <div className="flex flex-col gap-5 opacity-0 animate-[fade-up_0.65s_0.4s_ease_both]">
+          <div className="flex flex-col gap-5 opacity-0 animate-[fade-up_0.35s_0.15s_ease_both]">
             <div className="flex flex-col gap-4">
               {CONTACT_LINKS.map(({ label, value, href, Icon }) => (
                 <a

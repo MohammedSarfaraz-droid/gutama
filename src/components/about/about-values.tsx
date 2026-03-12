@@ -46,7 +46,7 @@ export function AboutValues() {
 
         <StaggerGroup
           className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
-          delay={0.08}
+          delay={0.05}
         >
           {VALUES.map(({ icon: Icon, title, description }) => (
             <StaggerItem key={title}>

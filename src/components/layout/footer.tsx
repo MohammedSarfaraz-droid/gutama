@@ -41,20 +41,20 @@ export function Footer() {
             <Image src="/images/logo2.png" alt={siteConfig.business.name} width={180} height={72} quality={60} sizes="360px" className="h-20 w-auto object-contain" />
           </Link>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{siteConfig.business.description}</p>
-          <div className="mt-4 space-y-2 text-sm">
-            <a href={`tel:${siteConfig.phones.english}`} className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
+          <div className="mt-4 flex flex-col gap-2 text-sm">
+            <a href={`tel:${siteConfig.phones.english}`} className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
               <Phone className="h-4 w-4 text-primary" />
               English: {siteConfig.phones.english}
             </a>
-            <a href={`tel:${siteConfig.phones.spanish}`} className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
+            <a href={`tel:${siteConfig.phones.spanish}`} className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
               <Phone className="h-4 w-4 text-secondary" />
               Espanol: {siteConfig.phones.spanish}
             </a>
-            <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
+            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground">
               <Mail className="h-4 w-4 text-secondary" />
               {siteConfig.email}
             </a>
-            <p className="inline-flex items-center gap-2 text-muted-foreground">
+            <p className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
               {siteConfig.business.regionLabel}
             </p>

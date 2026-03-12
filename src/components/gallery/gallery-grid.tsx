@@ -24,7 +24,7 @@ export function GalleryGrid({ projects, activeCategory }: GalleryGridProps) {
   return (
     <div className="columns-1 gap-6 space-y-6 sm:columns-2 lg:columns-3">
       {projects.map((project, index) => (
-        <Reveal key={`${project.title}-${activeCategory}`} delay={index * 0.06} y={16}>
+        <Reveal key={`${project.title}-${activeCategory}`} delay={index * 0.04} y={16}>
           <article className="glass-card group mb-6 cursor-pointer break-inside-avoid overflow-hidden transition-all duration-500 hover:border-secondary/30">
             <div className={`relative overflow-hidden ${getCardHeight(index)}`}>
               <Image

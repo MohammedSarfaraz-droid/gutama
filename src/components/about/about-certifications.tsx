@@ -22,7 +22,7 @@ export function AboutCertifications() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.07}>
+        <Reveal delay={0.05}>
           <ul className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
             {CREDENTIALS.map(({ icon: Icon, label, sub }) => (
               <li key={label} className="flex flex-col items-center gap-2 text-center">

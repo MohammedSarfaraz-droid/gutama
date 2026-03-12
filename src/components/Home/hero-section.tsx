@@ -37,7 +37,7 @@ export function HeroSection() {
             ))}
           </div>
         </Reveal>
-        <Reveal delay={0.08}>
+        <Reveal delay={0.05}>
           <h1 className="mx-auto mt-6 max-w-5xl font-serif text-4xl font-bold leading-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             Premium Roofing &
             <br />
@@ -46,12 +46,12 @@ export function HeroSection() {
             Built to Last
           </h1>
         </Reveal>
-        <Reveal delay={0.14}>
+        <Reveal delay={0.08}>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-[#FFFFFF] md:text-xl">
             Trusted across {siteConfig.business.regionLabel}, delivering high-craftsmanship service for residential and commercial properties.
           </p>
         </Reveal>
-        <Reveal delay={0.2}>
+        <Reveal delay={0.12}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="px-8 py-6 text-base font-semibold">
               <Link href="#contact">

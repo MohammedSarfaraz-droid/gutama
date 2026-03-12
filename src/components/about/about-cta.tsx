@@ -31,7 +31,7 @@ export function AboutCta() {
         </Reveal>
 
         {/* Headline */}
-        <Reveal delay={0.06}>
+        <Reveal delay={0.04}>
           <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
             Ready to Work With a Team
             <br />
@@ -40,7 +40,7 @@ export function AboutCta() {
         </Reveal>
 
         {/* Body */}
-        <Reveal delay={0.1}>
+        <Reveal delay={0.06}>
           <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
             Join over a thousand satisfied homeowners across {siteConfig.business.regionLabel} who
             chose {siteConfig.business.name} for quality that lasts.
@@ -48,7 +48,7 @@ export function AboutCta() {
         </Reveal>
 
         {/* Buttons */}
-        <Reveal delay={0.14}>
+        <Reveal delay={0.08}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" className="px-8 py-6 text-base font-semibold">
               <Link href="/contact">
@@ -71,7 +71,7 @@ export function AboutCta() {
         </Reveal>
 
         {/* Subtext */}
-        <Reveal delay={0.18}>
+        <Reveal delay={0.1}>
           <p className="mt-6 text-sm text-muted-foreground">
             English &amp; Espa&ntilde;ol &middot;{" "}
             <a

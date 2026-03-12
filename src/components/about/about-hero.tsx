@@ -55,7 +55,7 @@ export function AboutHero() {
         </Reveal>
 
         {/* Headline */}
-        <Reveal delay={0.06}>
+        <Reveal delay={0.04}>
           <h1 className="mb-3 font-serif text-[clamp(48px,7.5vw,90px)] leading-none tracking-[-0.01em] text-foreground">
             Your Trusted
             <span className="block italic text-secondary">Roofing Partner</span>
@@ -63,12 +63,12 @@ export function AboutHero() {
         </Reveal>
 
         {/* Gold underline */}
-        <Reveal delay={0.1}>
+        <Reveal delay={0.06}>
           <div className="mb-7 h-px w-44 origin-left bg-linear-to-r from-secondary to-secondary/20" />
         </Reveal>
 
         {/* Description */}
-        <Reveal delay={0.13}>
+        <Reveal delay={0.08}>
           <p className="mb-12 max-w-lg text-[clamp(15px,1.7vw,18px)] leading-relaxed text-muted-foreground">
             Since {siteConfig.business.foundedYear}, {siteConfig.business.name} has been delivering
             premium roofing, siding, and exterior craftsmanship—licensed, bilingual, and built on
@@ -77,7 +77,7 @@ export function AboutHero() {
         </Reveal>
 
         {/* CTAs */}
-        <Reveal delay={0.17}>
+        <Reveal delay={0.1}>
           <div className="flex flex-wrap gap-3.5">
             <Button asChild className="h-12 px-7 text-sm uppercase tracking-[0.14em]">
               <Link href="/contact">
@@ -99,7 +99,7 @@ export function AboutHero() {
         </Reveal>
 
         {/* Stats row */}
-        <Reveal delay={0.22}>
+        <Reveal delay={0.13}>
           <div className="mt-16 flex flex-wrap gap-x-12 gap-y-8 border-t border-secondary/25 pt-10">
             {[
               { value: String(siteConfig.business.foundedYear), label: "Year Founded" },

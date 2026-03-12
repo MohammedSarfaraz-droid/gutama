@@ -43,7 +43,7 @@ export function AboutStory() {
           </Reveal>
 
           {/* Story Text */}
-          <Reveal delay={0.1}>
+          <Reveal delay={0.06}>
             <div>
               <p className="mb-5 inline-flex items-center gap-2 text-[11px] font-medium tracking-[0.18em] uppercase text-secondary">
                 <span className="h-px w-6 bg-secondary" />
