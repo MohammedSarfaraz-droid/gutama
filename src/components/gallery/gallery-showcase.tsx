@@ -23,7 +23,7 @@ export function GalleryShowcase() {
   }, [activeCategory]);
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-10">
       <Container>
         <GalleryFilters
           categories={GALLERY_CATEGORIES}

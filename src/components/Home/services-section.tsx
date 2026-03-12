@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { SectionHeading } from "@/components/sections/section-heading";
+import { SectionHeading } from "@/components/Home/section-heading";
 import { serviceIconMap } from "@/components/ui/icon-map";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";

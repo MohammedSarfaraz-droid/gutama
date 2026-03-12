@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
-import { SectionHeading } from "@/components/sections/section-heading";
+import { SectionHeading } from "@/components/Home/section-heading";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import type { GalleryItem } from "@/types/site";

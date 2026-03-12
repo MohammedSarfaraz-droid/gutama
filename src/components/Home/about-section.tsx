@@ -3,7 +3,7 @@ import { Shield } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 import { Reveal } from "@/components/motion/reveal";
-import { SectionHeading } from "@/components/sections/section-heading";
+import { SectionHeading } from "@/components/Home/section-heading";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 

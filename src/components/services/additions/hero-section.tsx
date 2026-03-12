@@ -14,7 +14,7 @@ const STATS = [
 
 export function AdditionsHeroSection() {
   return (
-    <section className="relative flex min-h-screen items-end overflow-hidden">
+    <section className="relative flex min-h-[90vh] items-end overflow-hidden">
       <div className="absolute inset-0">
         <div className="relative h-[115%] w-full">
           <Image
@@ -32,7 +32,7 @@ export function AdditionsHeroSection() {
 
       <div className="absolute top-0 bottom-0 left-[max(24px,calc((100vw-1280px)/2))] z-10 w-px bg-linear-to-b from-transparent via-secondary/40 to-transparent" />
 
-      <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pt-20 pb-24">
+      <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pt-8 pb-24">
         <nav className="mb-10 flex items-center gap-2">
           <span className="flex items-center gap-2">
             <Link href="/" className="text-[11px] tracking-[0.12em] uppercase text-muted-foreground transition-colors hover:text-secondary">
