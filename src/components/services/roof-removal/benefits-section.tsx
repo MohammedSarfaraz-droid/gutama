@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function RoofRemovalBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "shield", title: "Property Protection", desc: "We protect landscaping, siding, windows, and surrounding surfaces throughout the tear-off process." },
         { icon: "clock", title: "Efficient Scheduling", desc: "Removal work is sequenced to keep the project moving toward deck prep and new installation without delay." },
         { icon: "ruler", title: "Clean Deck Exposure", desc: "The roof deck is left open, visible, and ready for inspection rather than buried under old problem materials." },

@@ -13,10 +13,10 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg3.png"
-          alt=""
+          alt="Residential roofing and exterior craftsmanship showcase"
           fill
           priority
-          quality={60}
+          quality={90}
           sizes="100vw"
           className="object-cover object-center"
         />

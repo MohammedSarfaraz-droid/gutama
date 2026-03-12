@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function EmergencyRepairBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "clock", title: "Rapid Stabilization", desc: "We prioritize immediate protection to limit interior damage and prevent the problem from spreading." },
         { icon: "shield", title: "Protection First", desc: "Temporary coverings, securement, and controlled repair sequencing help keep the property safe while permanent work is planned." },
         { icon: "users", title: "Clear Communication", desc: "We explain what happened, what needs immediate attention, and what the long-term repair should include." },

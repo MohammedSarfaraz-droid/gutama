@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function ReRoofingBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "shield", title: "Complete System Protection", desc: "Underlayment, flashing, ventilation, and shingle installation are handled as one coordinated assembly." },
         { icon: "award", title: "Premium Material Standards", desc: "We install roofing products chosen for weather performance, appearance, and long-term value." },
         { icon: "ruler", title: "Clean Installation Detailing", desc: "Lines, transitions, ridges, and edge conditions are executed with finish quality in mind." },

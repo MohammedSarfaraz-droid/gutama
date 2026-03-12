@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function SidingBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "home", title: "Sharper Curb Appeal", desc: "Updated siding can dramatically improve the visual quality and value perception of the home." },
         { icon: "shield", title: "Envelope Protection", desc: "Flashing, trim transitions, and moisture management are handled to support long-term exterior performance." },
         { icon: "ruler", title: "Straight Lines & Clean Finish", desc: "Alignment, reveal consistency, and detail transitions are treated as finish-level craftsmanship." },

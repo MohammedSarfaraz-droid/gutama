@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function GuttersBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "ruler", title: "Accurate Pitch & Sizing", desc: "Every run is laid out to move water efficiently without overflow or standing water." },
         { icon: "shield", title: "Foundation Protection", desc: "Proper downspout routing helps keep runoff away from foundation walls, walks, and planted areas." },
         { icon: "award", title: "Clean Exterior Finish", desc: "Seamless systems with tidy fastening and alignment improve both function and appearance." },

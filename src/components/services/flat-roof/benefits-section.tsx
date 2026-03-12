@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function FlatRoofBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "shield", title: "Leak-Resistant Detailing", desc: "Transitions, penetrations, seams, and edge conditions are handled with waterproofing discipline." },
         { icon: "ruler", title: "Drainage Precision", desc: "We plan slope, crickets, drains, and edges to reduce ponding and extend roof life." },
         { icon: "award", title: "System-Specific Expertise", desc: "Different membranes perform differently, and we tailor installation to the exact roof system selected." },

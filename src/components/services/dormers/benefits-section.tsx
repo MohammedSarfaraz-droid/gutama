@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function DormersBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "home", title: "Architectural Fit", desc: "We design dormers to match roof proportions, siding lines, trim details, and overall massing." },
         { icon: "shield", title: "Weather-Tight Integration", desc: "Flashing, roofing transitions, and exterior cladding are handled as part of one protected envelope." },
         { icon: "award", title: "Finish-Ready Craftsmanship", desc: "Framing, windows, trim, and siding are installed with a high standard of finish quality." },

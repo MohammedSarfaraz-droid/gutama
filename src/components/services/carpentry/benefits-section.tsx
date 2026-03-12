@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function CarpentryBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "ruler", title: "Precise Fit & Finish", desc: "Accurate measuring, clean cuts, and crisp detailing keep the final work refined and consistent." },
         { icon: "shield", title: "Structural Confidence", desc: "We correct framing and support issues with code-conscious execution and durable materials." },
         { icon: "award", title: "Craftsmanship First", desc: "Every trim line, joint, and finish surface is handled with a high standard of workmanship." },

@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function SlateRoofBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "award", title: "Specialized Slate Handling", desc: "Slate requires a different installation mindset than standard roofing materials, and we treat it accordingly." },
         { icon: "shield", title: "Compatible Roof Detailing", desc: "Flashings, transitions, and repairs are planned to work with slate rather than compromise it." },
         { icon: "ruler", title: "Clean Visual Consistency", desc: "Repair and replacement work is approached with attention to layout, size matching, and the roof's overall character." },

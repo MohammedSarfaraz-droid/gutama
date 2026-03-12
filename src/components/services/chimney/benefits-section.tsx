@@ -17,7 +17,7 @@ const ICON_MAP = {
 } as const;
 
 export function ChimneyBenefitsSection() {
-  const content = [
+  const content: Array<{ icon: keyof typeof ICON_MAP; title: string; desc: string }> = [
         { icon: "shield", title: "Weatherproof Protection", desc: "We stop water intrusion at the roofline and chimney envelope before deeper damage develops." },
         { icon: "ruler", title: "Clean Masonry Detailing", desc: "Mortar joints, brick alignment, flashing bends, and finish transitions are handled with precision." },
         { icon: "award", title: "Repair or Rebuild Expertise", desc: "We can stabilize isolated failures or execute full chimney rebuilds when structural damage requires it." },
